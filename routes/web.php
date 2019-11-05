@@ -18,7 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'ItemsController@store');
 
-Auth::routes();
+Route::get('/items/create', 'ItemsController@create');
 
 Route::view('ocr','ocr');
