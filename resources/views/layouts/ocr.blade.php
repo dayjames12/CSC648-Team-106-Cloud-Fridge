@@ -8,7 +8,7 @@
     <p class="has-text-centered">SFSU Software Engineering Project CSC 648-848, Fall 2019.</p>
     <p class="has-text-centered">For Demonstration Only.</p>
 
-    <title>Cloud Fridge</title>
+    <title>OCR</title>
     
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -17,7 +17,9 @@
 </head>
 <body>
     <div id="app">
-        <div class="hero is-primary"><navbar-component></navbar-component></div>
+        <div class="hero is-primary">
+            <navbar-component></navbar-component>
+        </div>
         @yield('content')
     </div>
 </body>
