@@ -10,7 +10,7 @@
             </div>
             <div class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="/">Home</a>
+                    <a class="navbar-item" href="/home">Home</a>
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item">

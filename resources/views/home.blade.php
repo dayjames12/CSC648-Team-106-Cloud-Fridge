@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- <navbar-component></navbar-component>--}}
 <section class="section">
     <div class="container">
 
