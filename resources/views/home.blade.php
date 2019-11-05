@@ -35,7 +35,7 @@
         {{-- Attempt Inventory + Sort By style 2 --}}
         <div class ="block">
             <div class="notification">
-                <p>Inventory</p>
+                <h1 class="title">Inventory</h1>
                 <form>
                     <div class="field">
                         <label class="label">Sort By</label>
