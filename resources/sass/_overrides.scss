@@ -20,7 +20,7 @@
 .button {
   &.is-active,
   &:active {
-    box-shadow: inset 1px 1px 4px rgba($grey-darker, 0.3);
+    box-shadow: inset 9px 1px 4px rgba($grey-darker, 0.3);
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
