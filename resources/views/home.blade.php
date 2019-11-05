@@ -53,30 +53,6 @@
             </div>
         </div>
 
-        {{-- Attempt at food list 
-        <div class="block">
-            <div class="notification">
-                <div class="card">
-                    <div class="card-content">
-                        <p class="title">
-                        Title
-                        </p>
-                    </div>
-                    <footer class="card-footer">
-                        <p class="card-footer-item">
-                            Card Footer Item
-                        </p>
-                    </footer>
-                    <footer class="card-footer">
-                        <p class="card-footer-item">
-                            Card Footer Item 2
-                        </p>
-                    </footer>
-                </div>
-            <div class="notification">
-        </div>
-        --}}
-
         {{-- Attempt at food list 2 --}}
         <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
             <div class="tile is-vertical is-5">
