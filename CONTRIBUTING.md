@@ -13,6 +13,9 @@ Please note we have a code of conduct, please follow it in all your interactions
    variables, exposed ports, useful file locations and container parameters.
 3. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
    do not have permission to do that, you may request the second reviewer to merge it for you.
+   
+After your pull request has been submitted, the Git Master will then review the code you have submitted.
+All code you submit is subject to change to the Git Master's discretion.
 
 ## Code of Conduct
 
