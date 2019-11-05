@@ -32,19 +32,10 @@
             </div>
         </div>
 
-        {{-- Attempt Inventory + Sort By style 1 --}}
-        {{-- 
-        <div class="block">
-            <div class="box">
-                <p class ="content is-medium">Inventory <button class="button is-light">Sort By</button></p>
-            </div>
-        </div>
-        --}}
-
         {{-- Attempt Inventory + Sort By style 2 --}}
         <div class ="block">
             <div class="notification">
-                Inventory
+                <p>Inventory</p>
                 <form>
                     <div class="field">
                         <label class="label">Sort By</label>
@@ -91,6 +82,7 @@
             <div class="tile is-vertical is-5">
                 <div class="tile is-parent is-vertical">
                     <article class="tile is-child notification is-primary">
+                        <button class="delete"></button>
                         <p class="title">Apple</p>
                         <p class="subtitle">Expires Never</p>
                         <div class="content">
@@ -98,6 +90,7 @@
                         </div>
                     </article>
                     <article class="tile is-child notification is-warning">
+                        <button class="delete"></button>
                         <p class="title">Banana</p>
                         <p class="subtitle">Expired Yesterday</p>
                         <div class="content">
