@@ -29,6 +29,15 @@
             </div>
         </div>
 
+        {{-- Attempt Add Item Box 1 --}}
+        <div class="block">
+            <div class="field has-addons">
+                <p class="control">
+                    <a href="/items/create" class="button is-info">Add Item</a>
+                </p>
+            </div>
+        </div>
+
         {{-- Attempt Inventory + Sort By style 1 --}}
         {{-- 
         <div class="block">
@@ -68,16 +77,15 @@
                         Title
                         </p>
                     </div>
+
+                    @foreach ($items as $item)
                     <footer class="card-footer">
                         <p class="card-footer-item">
-                            Card Footer Item
+                            {{ $item->name }}
                         </p>
                     </footer>
-                    <footer class="card-footer">
-                        <p class="card-footer-item">
-                            Card Footer Item 2
-                        </p>
-                    </footer>
+                    @endforeach
+
                 </div>
             <div class="notification">
         </div>
