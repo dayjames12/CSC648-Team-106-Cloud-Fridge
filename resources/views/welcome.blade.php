@@ -14,7 +14,6 @@
     </div>
   </section>
 
-
   {{-- About us section--}}
   <div class="block">
     <article class="message">

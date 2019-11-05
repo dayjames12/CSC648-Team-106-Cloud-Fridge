@@ -17,16 +17,7 @@
         </div>
 
         {{-- Attempt Upload Receipt Box 1 --}}
-        <div class="block">
-            <div class="field has-addons">
-                <p class="control">
-                    <input type="text" class="input" placeholder="Upload Receipt...">
-                </p>
-                <p class="control">
-                    <a href="" class="button is-info">Upload</a>
-                </p>
-            </div>
-        </div>
+        
 
         {{-- Attempt Inventory + Sort By style 1 --}}
         {{-- 
