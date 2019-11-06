@@ -4,16 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
-    <p class="has-text-centered">SFSU Software Engineering Project CSC 648-848, Fall 2019.</p>
-    <p class="has-text-centered">For Demonstration Only.</p>
-
+    <div class= "container">
+        <p class="has-text-centered">SFSU Software Engineering Project CSC 648-848, Fall 2019.</p>
+        <p class="has-text-centered">For Demonstration Only.</p>
+    </div>
     <title>Cloud Fridge</title>
     
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+    .center {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    </style>
+        
 </head>
 <body class= "has-navbar-fixed-top">
     <div id="app">
