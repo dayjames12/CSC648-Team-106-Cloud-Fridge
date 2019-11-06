@@ -15,9 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class= "has-navbar-fixed-top">
     <div id="app">
-        <div class="hero is-primary"><navbar-component></navbar-component></div>
+        {{-- Moved navbar component out of the hero section because it was breaking the fixed nav bar --}}
+        <navbar-component></navbar-component>
+        <div class="hero is-link">
+           
+        </div>
         @yield('content')
     </div>
 </body>

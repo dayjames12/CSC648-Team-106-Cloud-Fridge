@@ -1866,6 +1866,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37256,7 +37258,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { staticClass: "navbar" }, [
+  return _c("nav", { staticClass: "navbar is-white is-fixed-top has-shadow" }, [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "navbar-brand" }, [
         _vm._m(0),
@@ -37319,21 +37321,21 @@ var staticRenderFns = [
       _c("div", { staticClass: "navbar-item" }, [
         _c("div", { staticClass: "buttons" }, [
           _c(
-            "a",
+            "button",
             {
-              staticClass: "button is-primary is-inverted",
+              staticClass: "button is-primary is-rounded",
               attrs: { href: "/register" }
             },
-            [_vm._v("Sign up")]
+            [_c("strong", [_vm._v("Sign up")])]
           ),
           _vm._v(" "),
           _c(
-            "a",
+            "button",
             {
-              staticClass: "button is-primary is-inverted",
+              staticClass: "button is-light is-rounded",
               attrs: { href: "/login" }
             },
-            [_vm._v("Log in")]
+            [_c("strong", [_vm._v("Login")])]
           )
         ])
       ])
@@ -49716,15 +49718,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************!*\
   !*** ./resources/js/components/OcrComponent.vue ***!
   \**************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _OcrComponent_vue_vue_type_template_id_22fe0dea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OcrComponent.vue?vue&type=template&id=22fe0dea& */ "./resources/js/components/OcrComponent.vue?vue&type=template&id=22fe0dea&");
 /* harmony import */ var _OcrComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OcrComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/OcrComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _OcrComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _OcrComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -49754,7 +49755,7 @@ component.options.__file = "resources/js/components/OcrComponent.vue"
 /*!***************************************************************************!*\
   !*** ./resources/js/components/OcrComponent.vue?vue&type=script&lang=js& ***!
   \***************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49800,8 +49801,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\james\Development\648\csc648-03-fa19-team106-georgebutler\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\james\Development\648\csc648-03-fa19-team106-georgebutler\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Documents\CloudFridge\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Documents\CloudFridge\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
