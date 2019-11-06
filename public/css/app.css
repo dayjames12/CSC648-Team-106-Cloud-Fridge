@@ -12451,7 +12451,7 @@ label.panel-block:hover {
 
 .button.is-active,
 .button:active {
-  box-shadow: inset 1px 1px 4px rgba(34, 34, 34, 0.3);
+  box-shadow: inset 9px 1px 4px rgba(34, 34, 34, 0.3);
 }
 
 .button.is-white {
