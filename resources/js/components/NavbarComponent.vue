@@ -16,8 +16,11 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary is-rounded" href="/register"><strong>Sign up</strong></a>
-                            <a class="button is-light is-rounded" href="/login"><strong>Login</strong></a>
+                            <a class="button is-primary" href="/register"><strong>Sign up</strong></a>
+                            <a class="button" href="/login">Login</a>
+                            <form action="auth" method="POST">
+                                <button class="button" type="submit">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>

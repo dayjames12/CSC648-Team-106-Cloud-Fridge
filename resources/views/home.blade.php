@@ -8,7 +8,6 @@
 
 <section class="section">
     <div class="container">
-
         {{-- Attempt Search Box 1 --}}
         <div class="block">
             <div class="field has-addons">

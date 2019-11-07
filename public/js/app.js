@@ -1866,6 +1866,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37320,21 +37323,19 @@ var staticRenderFns = [
         _c("div", { staticClass: "buttons" }, [
           _c(
             "a",
-            {
-              staticClass: "button is-primary is-rounded",
-              attrs: { href: "/register" }
-            },
+            { staticClass: "button is-primary", attrs: { href: "/register" } },
             [_c("strong", [_vm._v("Sign up")])]
           ),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "button is-light is-rounded",
-              attrs: { href: "/login" }
-            },
-            [_c("strong", [_vm._v("Login")])]
-          )
+          _c("a", { staticClass: "button", attrs: { href: "/login" } }, [
+            _vm._v("Login")
+          ]),
+          _vm._v(" "),
+          _c("form", { attrs: { action: "/auth/logout", method: "POST" } }, [
+            _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
+              _vm._v("Logout")
+            ])
+          ])
         ])
       ])
     ])

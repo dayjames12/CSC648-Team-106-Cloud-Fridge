@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-primary">
-    <section class="hero is-info">
+<section>
+    <div class="hero is-primary">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">Cloud Fridge</h1>
                 <h2 class="subtitle">The easiest way to manage your fridge.</h2>
             </div>
         </div>
-    </section>
-</section>
-<section>
+    </div>
     <div class="container">
         <article class="message">
             <div class="message-header">About the App</div>
@@ -28,6 +26,86 @@
             </div>
             <div class="message-header">Recorded Meeting Summary</div>
             <div class="message-body">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/16/19</p>
+                                <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/25/19</p>
+                                <div class="content">Discussion of each member's role of the group and type of coding practices used in our team. The risk are some of our group members weren't strong at a particular technical skill set. Our solution was to allow members to work in a particular role that they are interested in and give members who are not as proficient to join a front-end or back-end so the each member can teach each other.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">10/10/19</p>
+                                <div class="content">Had a in-class group team work. Everybody communicated affectively to work on Milestone 2. One of our main component for our group project was to have the receipt scanner to our app and the risk was that we never thought to place the receipt scanner to our app. We resolved this problem by correcting our project and to add our receipt scanner.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/16/19</p>
+                                <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/16/19</p>
+                                <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/16/19</p>
+                                <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/16/19</p>
+                                <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <p class="title">9/16/19</p>
+                                <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.</div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
                 <table class="table is-striped">
                     <thead>
                         <th>Date</th>
@@ -43,7 +121,7 @@
                             <td>40 Minutes</td>
                             <td>In Class</td>
                             <td>
-                                Help entire group in Setting up GitHub and make sure everybody are connected to the correct repo Project. A risk was some team members doesn't have much experience using Git/GitHub. This risk is important because all team members should be able to push/pull/commit for their individual role. Our solution was to spend time together to make sure everybody is set up and was able to know which command used for Git and they are able to push into our Github repo.
+                                
                             </td>
                         </tr>
 
