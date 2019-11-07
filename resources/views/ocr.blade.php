@@ -1,4 +1,4 @@
-@extends('layouts.ocr')
+@extends('layouts.app')
 
 @section('content')
     <ocr-component></ocr-component>
