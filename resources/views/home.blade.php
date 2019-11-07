@@ -15,7 +15,7 @@
                     <input type="text" class="input" placeholder="Search Food List...">
                 </p>
                 <p class="control">
-                    <a href="" class="button is-info">Search</a>
+                    <button class="button is-info">Search</a>
                 </p>
             </div>
         </div>
@@ -68,50 +68,33 @@
                         </p>
                     </div>
                 </form>
-            </div>
-        </div>
-        
-        {{-- Attempt at food list --}}
-        <div class="block">
-            <div class="notification">
-                <div class="card">
-                    <div class="card-content">
-                        <p class="title">
-                        Title
-                        </p>
-                    </div>
-
-                    @foreach ($items as $item)
-                    <footer class="card-footer">
-                        <p class="card-footer-item">
-                            {{ $item->name }}
-                        </p>
-                    </footer>
-                    @endforeach
-               </div>
-           </div>
-        </div>
                    
-        {{-- Attempt at food list 2 --}}
-        <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
-            <div class="tile is-vertical is-5">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                        <button class="delete"></button>
-                        <p class="title">Apple</p>
-                        <p class="subtitle">Expires Never</p>
-                        <div class="content">
-                            Quantity: 1
+                {{-- Attempt at food list 2 --}}
+                <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
+
+                            @foreach ($items as $item)
+                            <article class="tile is-child notification is-primary">
+                                
+                                {{-- Retrieve item id to delete when button is pressed --}}
+                                
+                                <form method="POST" action="/items/{{ $item->id }}">
+                                  {{ method_field('DELETE')}}
+                                  @csrf
+                                  <button class="delete" style="float: right;"></button>
+                                </form>
+
+                                <p class="title"> {{ $item->name }} </p>
+                                <p class="subtitle"> Expires on {{ $item->expiration }}</p>
+                                <div class="content">
+                                    Quantity: {{ $item->quantity }}
+                                </div>
+                            </article>
+                            @endforeach
+
                         </div>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                        <button class="delete"></button>
-                        <p class="title">Banana</p>
-                        <p class="subtitle">Expired Yesterday</p>
-                        <div class="content">
-                            Quantity: 2
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>
