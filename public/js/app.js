@@ -1893,6 +1893,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1908,37 +1910,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      file: ''
+      selectedFile: null
     };
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: {
-    handleFile: function handleFile() {
-      this.file = this.$refs.file.files[0];
+    onFileSelected: function onFileSelected(event) {
+      this.selectedFile = event.target.files[0];
     },
     ocr: function ocr() {
       var formData = new formData();
-      formData.append('file', this.file);
-      axios.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
+      formData.append('file', this.selectedFile);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -37367,57 +37353,46 @@ var render = function() {
       _c("div", { staticClass: "panel-heading" }, [_vm._v("OCR Receipt")]),
       _vm._v(" "),
       _c("div", { staticClass: "panel-body" }, [
-        _c("form", [
-          _c("div", { staticClass: "file is-primary" }, [
-            _c("label", { staticClass: "file-label" }, [
-              _c("input", {
-                ref: "file",
-                staticClass: "file-input",
-                attrs: { type: "file" },
+        _c(
+          "form",
+          {
+            attrs: { enctype: "multipart/form-data" },
+            on: {
+              submit: function($event) {
+                return _vm.ocr()
+              }
+            }
+          },
+          [
+            _c("input", {
+              staticClass: "file",
+              attrs: { type: "file", name: "Select file" },
+              on: {
+                change: function($event) {
+                  return _vm.onFileSelected()
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "button is-primary",
                 on: {
                   change: function($event) {
-                    return _vm.handleFile()
+                    return _vm.ocr()
                   }
                 }
-              }),
-              _vm._v(" "),
-              _vm._m(0)
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(1)
-        ])
+              },
+              [_vm._v("Upload")]
+            )
+          ]
+        )
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "file-cta" }, [
-      _c("span", { staticClass: "file-label" }, [
-        _vm._v(
-          "\n                                Upload image...\n                            "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "field is-grouped" }, [
-      _c("p", { staticClass: "control" }, [
-        _c("input", {
-          staticClass: "button is-primary",
-          attrs: { type: "submit", value: "Submit Image" }
-        })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
