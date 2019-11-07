@@ -1910,6 +1910,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -37348,46 +37351,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-8" }, [
-    _c("div", { staticClass: "panel panel-default" }, [
-      _c("div", { staticClass: "panel-heading" }, [_vm._v("OCR Receipt")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel-body" }, [
-        _c(
-          "form",
-          {
-            attrs: { enctype: "multipart/form-data" },
-            on: {
-              submit: function($event) {
-                return _vm.ocr()
-              }
-            }
-          },
-          [
-            _c("input", {
-              staticClass: "file",
-              attrs: { type: "file", name: "Select file" },
-              on: {
-                change: function($event) {
-                  return _vm.onFileSelected()
-                }
-              }
-            }),
-            _vm._v(" "),
+  return _c("div", { staticClass: "message" }, [
+    _c("div", { staticClass: "message-header" }, [_vm._v("OCR Receipt")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "message-body" }, [
+      _c("div", { staticClass: "box" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "panel-body" }, [
             _c(
-              "button",
+              "form",
               {
-                staticClass: "button is-primary",
+                attrs: { enctype: "multipart/form-data" },
                 on: {
-                  change: function($event) {
+                  submit: function($event) {
                     return _vm.ocr()
                   }
                 }
               },
-              [_vm._v("Upload")]
+              [
+                _c("input", {
+                  staticClass: "file",
+                  attrs: { type: "file", name: "Select file" },
+                  on: {
+                    change: function($event) {
+                      return _vm.onFileSelected()
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "button is-primary is-fullwidth",
+                    on: {
+                      change: function($event) {
+                        return _vm.ocr()
+                      }
+                    }
+                  },
+                  [_vm._v("Upload")]
+                )
+              ]
             )
-          ]
-        )
+          ])
+        ])
       ])
     ])
   ])

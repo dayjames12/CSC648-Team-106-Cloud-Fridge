@@ -16,11 +16,12 @@
 <body class="has-navbar-fixed-top">
     <div id="app">
         <navbar-component></navbar-component>
-        <div class="has-text-centered">
-            <div class="container">
-                <p>SFSU Software Engineering Project CSC 648-848, Fall 2019.</p>
-                <p>For Demonstration Only.</p>
-            </div>
+        <div class="container">
+            <article class="message is-info">
+                <div class="message-header has-text-centered">
+                    <p>SFSU Software Engineering Project CSC 648-848, Fall 2019. For Demonstration Only.</p>
+                </div>
+            </article>
         </div>
         @yield('content')
     </div>

@@ -22,7 +22,7 @@
                     <input type="text" class="input" placeholder="Upload Receipt...">
                 </p>
                 <p class="control">
-                    <a href="" class="button is-info">Upload</a>
+                    <button type="submit" class="button is-info">Upload</a>
                 </p>
             </div>
         </div>

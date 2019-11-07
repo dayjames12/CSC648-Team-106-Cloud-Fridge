@@ -1,13 +1,16 @@
 <template>
-    <div class="col-md-8">
-        <div class="panel panel-default">
-            <div class="panel-heading">OCR Receipt</div>
-
-            <div class="panel-body">
-                <form @submit="ocr()" enctype="multipart/form-data">
-                    <input class="file" type="file" name="Select file" v-on:change="onFileSelected()"/>
-                    <button class="button is-primary" v-on:change="ocr()">Upload</button>
-                </form>
+    <div class="message">
+        <div class="message-header">OCR Receipt</div>
+        <div class="message-body">
+            <div class="box">
+                <div class="container">
+                    <div class="panel-body">
+                        <form @submit="ocr()" enctype="multipart/form-data">
+                            <input class="file" type="file" name="Select file" v-on:change="onFileSelected()"/>
+                            <button class="button is-primary is-fullwidth" v-on:change="ocr()">Upload</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
