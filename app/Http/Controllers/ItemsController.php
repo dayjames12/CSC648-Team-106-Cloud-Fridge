@@ -24,4 +24,16 @@ class ItemsController extends Controller
 
       return redirect('/home');
     }
+
+    public function search()
+    {
+
+    }
+
+    public function destroy($id)
+    {
+      Item::find($id)->delete();
+
+      return redirect('/home');
+    }
 }
