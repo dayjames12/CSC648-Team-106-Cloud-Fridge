@@ -18,9 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
+Route::post('/home', 'ItemsController@store');
 
 Route::view('ocr','ocr');
 
 Route::get('/fridges', 'FridgesController@test');
+
+Route::get('/items/create', 'ItemsController@create');
+Route::delete('items/{item}', 'ItemsController@destroy');

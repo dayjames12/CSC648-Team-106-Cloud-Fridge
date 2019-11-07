@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar">
+    <nav class="navbar is-white is-fixed-top has-shadow">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
@@ -16,8 +16,11 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary is-inverted" href="/register">Sign up</a>
-                            <a class="button is-primary is-inverted" href="/login">Log in</a>
+                            <a class="button is-primary" href="/register"><strong>Sign up</strong></a>
+                            <a class="button" href="/login">Login</a>
+                            <form action="auth" method="POST">
+                                <button class="button" type="submit">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>

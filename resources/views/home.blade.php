@@ -8,7 +8,6 @@
 
 <section class="section">
     <div class="container">
-
         {{-- Attempt Search Box 1 --}}
         <div class="block">
             <div class="field has-addons">
@@ -16,13 +15,40 @@
                     <input type="text" class="input" placeholder="Search Food List...">
                 </p>
                 <p class="control">
-                    <a href="" class="button is-info">Search</a>
+                    <button class="button is-info">Search</a>
                 </p>
             </div>
         </div>
 
         {{-- Attempt Upload Receipt Box 1 --}}
-        
+        <div class="block">
+            <div class="field has-addons">
+                <p class="control">
+                    <input type="text" class="input" placeholder="Upload Receipt...">
+                </p>
+                <p class="control">
+                    <a href="" class="button is-info">Upload</a>
+                </p>
+            </div>
+        </div>
+
+        {{-- Attempt Add Item Box 1 --}}
+        <div class="block">
+            <div class="field has-addons">
+                <p class="control">
+                    <a href="/items/create" class="button is-info">Add Item</a>
+                </p>
+            </div>
+        </div>
+
+        {{-- Attempt Inventory + Sort By style 1 --}}
+        {{-- 
+        <div class="block">
+            <div class="box">
+                <p class ="content is-medium">Inventory <button class="button is-light">Sort By</button></p>
+            </div>
+        </div>
+        --}}
 
         {{-- Attempt Inventory + Sort By style 2 --}}
         <div class ="block">
@@ -42,29 +68,33 @@
                         </p>
                     </div>
                 </form>
-            </div>
-        </div>
+                   
+                {{-- Attempt at food list 2 --}}
+                <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
+                    <div class="tile is-vertical is-5">
+                        <div class="tile is-parent is-vertical">
 
-        {{-- Attempt at food list 2 --}}
-        <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
-            <div class="tile is-vertical is-5">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                        <button class="delete"></button>
-                        <p class="title">Apple</p>
-                        <p class="subtitle">Expires Never</p>
-                        <div class="content">
-                            Quantity: 1
+                            @foreach ($items as $item)
+                            <article class="tile is-child notification is-primary">
+                                
+                                {{-- Retrieve item id to delete when button is pressed --}}
+                                
+                                <form method="POST" action="/items/{{ $item->id }}">
+                                  {{ method_field('DELETE')}}
+                                  @csrf
+                                  <button class="delete" style="float: right;"></button>
+                                </form>
+
+                                <p class="title"> {{ $item->name }} </p>
+                                <p class="subtitle"> Expires on {{ $item->expiration }}</p>
+                                <div class="content">
+                                    Quantity: {{ $item->quantity }}
+                                </div>
+                            </article>
+                            @endforeach
+
                         </div>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                        <button class="delete"></button>
-                        <p class="title">Banana</p>
-                        <p class="subtitle">Expired Yesterday</p>
-                        <div class="content">
-                            Quantity: 2
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>
