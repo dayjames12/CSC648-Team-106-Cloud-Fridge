@@ -1,3 +1,7 @@
 @import 'variables';
 @import '~bulma/bulma';
 @import "overrides";
+
+.notice {
+    padding: 0.5rem 0;
+}

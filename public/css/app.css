@@ -12810,3 +12810,7 @@ label.panel-block:hover {
   border-radius: 0;
 }
 
+.notice {
+  padding: 0.5rem 0;
+}
+
