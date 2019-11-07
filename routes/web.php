@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::view('ocr','ocr');
+
+Route::get('/fridges', 'FridgesController@test');
