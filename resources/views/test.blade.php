@@ -1,18 +1,9 @@
-<!-- using for testing database -->
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<html>
-<head>
-
-</head>
-    <title>Test View</title>
-
-<body>
+@section('content')
     <h1>Fridges from database</h1>
     
     @foreach($fridges as $fridges)
         <li>{{$fridges->name}}</li>
     @endforeach
-
-</body>
-</html>
+@endsection

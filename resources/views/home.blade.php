@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-{{-- <navbar-component></navbar-component>--}}
-{{-- enables usage of bulma icons --}}
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
 <section class="section">
     <div class="container">
         {{-- Attempt Search Box 1 --}}

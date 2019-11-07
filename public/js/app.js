@@ -37317,7 +37317,7 @@ var staticRenderFns = [
             _vm._v("Login")
           ]),
           _vm._v(" "),
-          _c("form", { attrs: { action: "/auth/logout", method: "POST" } }, [
+          _c("form", { attrs: { action: "auth", method: "POST" } }, [
             _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
               _vm._v("Logout")
             ])
