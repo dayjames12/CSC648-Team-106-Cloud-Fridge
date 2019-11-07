@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateFridgesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('fridges', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->json('items');//json going to be serialized?
+            $table->string('creator');//owner of fridge
+            $table->string('allowed')->nullable();//users of fridge
             $table->timestamps();
         });
     }
@@ -31,10 +29,12 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('fridges');
     }
 
-    public function fridge(){
-        return $this->hasOne('fridge');
+    public function user(){
+        return $this->belongsToMany('user');
     }
 }
+//user has one ridge
+//fridge has many users

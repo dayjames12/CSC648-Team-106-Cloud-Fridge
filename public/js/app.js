@@ -1890,6 +1890,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1905,37 +1907,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      file: ''
+      selectedFile: null
     };
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: {
-    handleFile: function handleFile() {
-      this.file = this.$refs.file.files[0];
+    onFileSelected: function onFileSelected(event) {
+      this.selectedFile = event.target.files[0];
     },
     ocr: function ocr() {
       var formData = new formData();
-      formData.append('file', this.file);
-      axios.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
+      formData.append('file', this.selectedFile);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -37366,57 +37352,46 @@ var render = function() {
       _c("div", { staticClass: "panel-heading" }, [_vm._v("OCR Receipt")]),
       _vm._v(" "),
       _c("div", { staticClass: "panel-body" }, [
-        _c("form", [
-          _c("div", { staticClass: "file is-primary" }, [
-            _c("label", { staticClass: "file-label" }, [
-              _c("input", {
-                ref: "file",
-                staticClass: "file-input",
-                attrs: { type: "file" },
+        _c(
+          "form",
+          {
+            attrs: { enctype: "multipart/form-data" },
+            on: {
+              submit: function($event) {
+                return _vm.ocr()
+              }
+            }
+          },
+          [
+            _c("input", {
+              staticClass: "file",
+              attrs: { type: "file", name: "Select file" },
+              on: {
+                change: function($event) {
+                  return _vm.onFileSelected()
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "button is-primary",
                 on: {
                   change: function($event) {
-                    return _vm.handleFile()
+                    return _vm.ocr()
                   }
                 }
-              }),
-              _vm._v(" "),
-              _vm._m(0)
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(1)
-        ])
+              },
+              [_vm._v("Upload")]
+            )
+          ]
+        )
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "file-cta" }, [
-      _c("span", { staticClass: "file-label" }, [
-        _vm._v(
-          "\n                                Upload image...\n                            "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "field is-grouped" }, [
-      _c("p", { staticClass: "control" }, [
-        _c("input", {
-          staticClass: "button is-primary",
-          attrs: { type: "submit", value: "Submit Image" }
-        })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49716,15 +49691,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************!*\
   !*** ./resources/js/components/OcrComponent.vue ***!
   \**************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _OcrComponent_vue_vue_type_template_id_22fe0dea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OcrComponent.vue?vue&type=template&id=22fe0dea& */ "./resources/js/components/OcrComponent.vue?vue&type=template&id=22fe0dea&");
 /* harmony import */ var _OcrComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OcrComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/OcrComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _OcrComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _OcrComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -49754,7 +49728,7 @@ component.options.__file = "resources/js/components/OcrComponent.vue"
 /*!***************************************************************************!*\
   !*** ./resources/js/components/OcrComponent.vue?vue&type=script&lang=js& ***!
   \***************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
