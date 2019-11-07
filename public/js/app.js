@@ -1866,9 +1866,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37322,7 +37319,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "navbar-item" }, [
         _c("div", { staticClass: "buttons" }, [
           _c(
-            "button",
+            "a",
             {
               staticClass: "button is-primary is-rounded",
               attrs: { href: "/register" }
@@ -37331,7 +37328,7 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c(
-            "button",
+            "a",
             {
               staticClass: "button is-light is-rounded",
               attrs: { href: "/login" }

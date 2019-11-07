@@ -1,5 +1,4 @@
 <template>
-    <!-- Added navbar properties to make it fixed -->
     <nav class="navbar is-white is-fixed-top has-shadow">
         <div class="container">
             <div class="navbar-brand">
@@ -16,11 +15,9 @@
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
-
                         <div class="buttons">
-                            <button class="button is-primary is-rounded" href="/register"><strong>Sign up</strong></button>
-                            <button class="button is-light is-rounded" href="/login"><strong>Login</strong></button>
-                            
+                            <a class="button is-primary is-rounded" href="/register"><strong>Sign up</strong></a>
+                            <a class="button is-light is-rounded" href="/login"><strong>Login</strong></a>
                         </div>
                     </div>
                 </div>

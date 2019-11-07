@@ -20,9 +20,9 @@
                     <div class="field">
                         <label class="label">{{ __('Password') }}</label>
                         <div class="control">
-                            <input class="input" type="password" value="{{ old('password') }}" name="password" required autocomplete="current-password" autofocus>
+                            <input class="input @error('password') is-danger @enderror" type="password" value="{{ old('password') }}" name="password" required autocomplete="current-password" autofocus>
                         </div>
-                        @error('email')
+                        @error('password')
                             <p class="help is-danger">{{ $message }}</p>
                         @enderror
                     </div>
