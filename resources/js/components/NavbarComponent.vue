@@ -18,7 +18,7 @@
                         <div class="buttons">
                             <a class="button is-primary" href="/register"><strong>Sign up</strong></a>
                             <a class="button" href="/login">Login</a>
-                            <form action="auth" method="POST">
+                            <form action="/logout" method="POST">
                                 <button class="button" type="submit">Logout</button>
                             </form>
                         </div>
