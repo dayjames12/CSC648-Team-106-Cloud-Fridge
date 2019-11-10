@@ -11,6 +11,7 @@
             <div class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
                 <div class="navbar-start">
                     <a class="navbar-item" href="/home">Home</a>
+                    <a class="navbar-item" href="/fridges">Fridges</a>
                     <a class="navbar-item" href="/ocr">OCR</a>
                 </div>
                 <div class="navbar-end">

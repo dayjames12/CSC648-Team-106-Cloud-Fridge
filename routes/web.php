@@ -22,7 +22,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'ItemsController@store');
 
-Route::view('ocr','ocr');
+// Route::view('ocr','ocr');
+Route::get('/ocr', function (){
+    return view('ocr');
+});
 
 Route::resource('fridges','FridgesController');
 
