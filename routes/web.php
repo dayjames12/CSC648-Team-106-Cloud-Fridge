@@ -26,6 +26,8 @@ Route::get('/items/create', 'ItemsController@create');
 Route::get('/items/search', 'ItemsController@search');
 Route::delete('items/{item}', 'ItemsController@destroy');
 
-Route::view('ocr','ocr');
+Route::get('/ocr', function (){
+    return view('ocr');
+});
 
 Route::resource('fridges','FridgesController');
