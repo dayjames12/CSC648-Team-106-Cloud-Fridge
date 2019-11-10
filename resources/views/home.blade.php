@@ -1,20 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
+
+{{-- <navbar-component></navbar-component>--}}
+{{-- enables usage of bulma icons --}}
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
 <section class="section">
     <div class="container">
+
         {{-- Attempt Search Box 1 --}}
         <div class="block">
             <div class="field has-addons">
 
-            <form method="GET" action="/items/search" style="float: left;">
+            <form method="GET" action="/items/search">
             @csrf
-                <p class="control">
-                    <input type="text" class="input" name="search" placeholder="Search Food List...">
-                </p>
-                <p class="control">
-                    <button class="button is-info">Search</a>
-                </p>
+                <div class="container">
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input type="text" class="input" name="search" placeholder="Search Fridge...">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info">Search</a>
+                        </div>
+                    </div>
+                </div>
             </form>
 
             </div>
@@ -27,7 +37,7 @@
                     <input type="text" class="input" placeholder="Upload Receipt...">
                 </p>
                 <p class="control">
-                    <button type="submit" class="button is-info">Upload</a>
+                    <a href="" class="button is-info">Upload</a>
                 </p>
             </div>
         </div>
