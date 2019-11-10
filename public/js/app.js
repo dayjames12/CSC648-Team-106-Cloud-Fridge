@@ -1866,6 +1866,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1890,6 +1893,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1908,34 +1913,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      file: ''
+      selectedFile: null
     };
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: {
-    handleFile: function handleFile() {
-      this.file = this.$refs.file.files[0];
+    onFileSelected: function onFileSelected(event) {
+      this.selectedFile = event.target.files[0];
     },
     ocr: function ocr() {
       var formData = new formData();
-      formData.append('file', this.file);
-      axios.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
+      formData.append('file', this.selectedFile);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -37320,21 +37312,19 @@ var staticRenderFns = [
         _c("div", { staticClass: "buttons" }, [
           _c(
             "a",
-            {
-              staticClass: "button is-primary is-rounded",
-              attrs: { href: "/register" }
-            },
+            { staticClass: "button is-primary", attrs: { href: "/register" } },
             [_c("strong", [_vm._v("Sign up")])]
           ),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "button is-light is-rounded",
-              attrs: { href: "/login" }
-            },
-            [_c("strong", [_vm._v("Login")])]
-          )
+          _c("a", { staticClass: "button", attrs: { href: "/login" } }, [
+            _vm._v("Login")
+          ]),
+          _vm._v(" "),
+          _c("form", { attrs: { action: "auth", method: "POST" } }, [
+            _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
+              _vm._v("Logout")
+            ])
+          ])
         ])
       ])
     ])
@@ -37361,62 +37351,55 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-8" }, [
-    _c("div", { staticClass: "panel panel-default" }, [
-      _c("div", { staticClass: "panel-heading" }, [_vm._v("OCR Receipt")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel-body" }, [
-        _c("form", [
-          _c("div", { staticClass: "file is-primary" }, [
-            _c("label", { staticClass: "file-label" }, [
-              _c("input", {
-                ref: "file",
-                staticClass: "file-input",
-                attrs: { type: "file" },
+  return _c("div", { staticClass: "message" }, [
+    _c("div", { staticClass: "message-header" }, [_vm._v("OCR Receipt")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "message-body" }, [
+      _c("div", { staticClass: "box" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "panel-body" }, [
+            _c(
+              "form",
+              {
+                attrs: { enctype: "multipart/form-data" },
                 on: {
-                  change: function($event) {
-                    return _vm.handleFile()
+                  submit: function($event) {
+                    return _vm.ocr()
                   }
                 }
-              }),
-              _vm._v(" "),
-              _vm._m(0)
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(1)
+              },
+              [
+                _c("input", {
+                  staticClass: "file",
+                  attrs: { type: "file", name: "Select file" },
+                  on: {
+                    change: function($event) {
+                      return _vm.onFileSelected()
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "button is-primary is-fullwidth",
+                    on: {
+                      change: function($event) {
+                        return _vm.ocr()
+                      }
+                    }
+                  },
+                  [_vm._v("Upload")]
+                )
+              ]
+            )
+          ])
         ])
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "file-cta" }, [
-      _c("span", { staticClass: "file-label" }, [
-        _vm._v(
-          "\n                                Upload image...\n                            "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "field is-grouped" }, [
-      _c("p", { staticClass: "control" }, [
-        _c("input", {
-          staticClass: "button is-primary",
-          attrs: { type: "submit", value: "Submit Image" }
-        })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
