@@ -6,12 +6,17 @@
         {{-- Attempt Search Box 1 --}}
         <div class="block">
             <div class="field has-addons">
+
+            <form method="GET" action="/items/search" style="float: left;">
+            @csrf
                 <p class="control">
-                    <input type="text" class="input" placeholder="Search Food List...">
+                    <input type="text" class="input" name="search" placeholder="Search Food List...">
                 </p>
                 <p class="control">
                     <button class="button is-info">Search</a>
                 </p>
+            </form>
+
             </div>
         </div>
 
