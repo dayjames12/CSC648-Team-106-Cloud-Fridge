@@ -1,3 +1,10 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.ignoreWords": [
+        "csrf",
+        "gaurded",
+        "gstatic",
+        "mailtrap",
+        "smtp"
+    ]
 }

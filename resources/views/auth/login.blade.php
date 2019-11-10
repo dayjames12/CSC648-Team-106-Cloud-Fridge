@@ -36,7 +36,7 @@
                     </div>
                     <div class="field is-grouped">
                         <div class="control">
-                            <button class="button is-link" type="submit">{{ __('Login') }}</button>
+                            <button class="button is-primary" type="submit">{{ __('Login') }}</button>
                         </div>
                         <div class="control">
                             @if (Route::has('password.request'))

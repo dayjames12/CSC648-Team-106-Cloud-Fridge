@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\FridgesController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,3 +27,5 @@ Route::get('/items/search', 'ItemsController@search');
 Route::delete('items/{item}', 'ItemsController@destroy');
 
 Route::view('ocr','ocr');
+
+Route::resource('fridges','FridgesController');

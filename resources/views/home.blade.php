@@ -1,14 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
-{{-- <navbar-component></navbar-component>--}}
-{{-- enables usage of bulma icons --}}
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
 <section class="section">
     <div class="container">
-
         {{-- Attempt Search Box 1 --}}
         <div class="block">
             <div class="field has-addons">
@@ -33,7 +27,7 @@
                     <input type="text" class="input" placeholder="Upload Receipt...">
                 </p>
                 <p class="control">
-                    <a href="" class="button is-info">Upload</a>
+                    <button type="submit" class="button is-info">Upload</a>
                 </p>
             </div>
         </div>
