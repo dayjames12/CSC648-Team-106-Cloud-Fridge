@@ -13,14 +13,18 @@
         <div class="block">
             <div class="field has-addons">
 
-            <form method="GET" action="/items/search" style="float: left;">
+            <form method="GET" action="/items/search">
             @csrf
-                <p class="control">
-                    <input type="text" class="input" name="search" placeholder="Search Food List...">
-                </p>
-                <p class="control">
-                    <button class="button is-info">Search</a>
-                </p>
+                <div class="container">
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input type="text" class="input" name="search" placeholder="Search Fridge...">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info">Search</a>
+                        </div>
+                    </div>
+                </div>
             </form>
 
             </div>
