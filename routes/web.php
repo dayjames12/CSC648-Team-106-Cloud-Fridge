@@ -20,8 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'ItemsController@store');
 
-
 Route::get('/items/create', 'ItemsController@create');
+Route::get('/items/search', 'ItemsController@search');
 Route::delete('items/{item}', 'ItemsController@destroy');
 
 Route::view('ocr','ocr');
