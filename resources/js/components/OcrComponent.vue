@@ -4,24 +4,13 @@
             <div class="panel-heading">OCR Receipt</div>
 
             <div class="panel-body">
-                <!-- <form action="./ocr" method="POST" @submit="ocr()" enctype="multipart/form-data"> -->
-                    <form>
-                    <div class="file is-primary">
-                        <label class="file-label">
-                            <input class="file-input" type="file" ref="file" v-on:change="handleFile()"/>
-                            <span class="file-cta">
-                                <span class="file-label">
-                                    Upload image...
-                                </span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <input type="submit" value="Submit Image" class="button is-primary" >
-                        </p>
-                    </div>
-                </form>
+                <input type="file" @change="onFileSelected" name="" id="">
+                <button @click="onUpload">Upload</button>
+            </div>
+            <div>
+                <ul>
+                    <li v-for="(item, index) in results" :key="index"> {{ item.LineText }} </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -31,31 +20,30 @@
     export default {
         data(){
             return{
-                file: ''
+                selectedFile:null,
+                results:null
             }
         },
-        mounted() {
-            console.log('Component mounted.')
-        },
         methods:{
-            handleFile(){
-                this.file = this.$refs.file.files[0];
+            onFileSelected(event){
+                this.selectedFile = event.target.files[0];
             },
-            ocr(){
-                let formData = new formData();
-                formData.append('file', this.file);
-                
-                axios.post( 'https://api.ocr.space/parse/image', '7930f4b52488957', formData,{
-                        headers: {
-                            'Content-Type': 'multipart/form-data'
-                        }
+            onUpload(){
+                const fd = new FormData();
+                fd.append("apikey","7930f4b52488957");
+                fd.append("isTable",'true');
+                fd.append("language","eng");
+                fd.append("detectOrientation","true");
+                fd.append("scale","true");
+                fd.append("isCreateSearchablePdf","true");
+                fd.append('image', this.selectedFile, this.selectedFile.name)
+                axios.post('https://api.ocr.space/parse/image', fd, {
+                })
+                .then(res => {
+                    console.log(res.data.ParsedResults[0].TextOverlay.Lines);
+                    this.results = res.data.ParsedResults[0].TextOverlay.Lines;
                     }
-                        ).then(function(){
-                            console.log('SUCCESS!!');
-                            })
-                        .catch(function(){
-                            console.log('FAILURE!!');
-                });
+                )
             }
         }
     }

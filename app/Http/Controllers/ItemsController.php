@@ -24,4 +24,19 @@ class ItemsController extends Controller
 
       return redirect('/home');
     }
+
+    public function search(Request $request)
+    {
+      $search = $request->input('search');
+      $items = Item::where('name', 'LIKE', '%'.$search.'%')->get();
+
+      return view('home', ['items' => $items]);
+    }
+
+    public function destroy($id)
+    {
+      Item::find($id)->delete();
+
+      return redirect('/home');
+    }
 }

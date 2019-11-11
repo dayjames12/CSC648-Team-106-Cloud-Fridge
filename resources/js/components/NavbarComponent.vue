@@ -1,5 +1,4 @@
 <template>
-    <!-- Added navbar properties to make it fixed -->
     <nav class="navbar is-white is-fixed-top has-shadow">
         <div class="container">
             <div class="navbar-brand">
@@ -12,15 +11,17 @@
             <div class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
                 <div class="navbar-start">
                     <a class="navbar-item" href="/home">Home</a>
+                    <a class="navbar-item" href="/fridges">Fridges</a>
                     <a class="navbar-item" href="/ocr">OCR</a>
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
-
                         <div class="buttons">
-                            <button class="button is-primary is-rounded" href="/register"><strong>Sign up</strong></button>
-                            <button class="button is-light is-rounded" href="/login"><strong>Login</strong></button>
-                            
+                            <a class="button is-primary" href="/register"><strong>Sign up</strong></a>
+                            <a class="button" href="/login">Login</a>
+                            <form action="/logout" method="POST">
+                                <button class="button" type="submit">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
