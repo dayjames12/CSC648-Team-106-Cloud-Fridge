@@ -1869,6 +1869,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1893,8 +1894,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1913,28 +1912,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      selectedFile: null
+      selectedFile: null,
+      results: null
     };
   },
   methods: {
     onFileSelected: function onFileSelected(event) {
       this.selectedFile = event.target.files[0];
     },
-    ocr: function ocr() {
-      var formData = new formData();
-      formData.append('file', this.selectedFile);
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://api.ocr.space/parse/image', '7930f4b52488957', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      }).then(function () {
-        console.log('SUCCESS!!');
-      })["catch"](function () {
-        console.log('FAILURE!!');
+    onUpload: function onUpload() {
+      var _this = this;
+
+      var fd = new FormData();
+      fd.append("apikey", "7930f4b52488957");
+      fd.append("isTable", 'true');
+      fd.append("language", "eng");
+      fd.append("detectOrientation", "true");
+      fd.append("scale", "true");
+      fd.append("isCreateSearchablePdf", "true");
+      fd.append('image', this.selectedFile, this.selectedFile.name);
+      axios.post('https://api.ocr.space/parse/image', fd, {}).then(function (res) {
+        console.log(res.data.ParsedResults[0].TextOverlay.Lines);
+        _this.results = res.data.ParsedResults[0].TextOverlay.Lines;
       });
     }
   }
@@ -37298,6 +37300,10 @@ var staticRenderFns = [
         _vm._v("Home")
       ]),
       _vm._v(" "),
+      _c("a", { staticClass: "navbar-item", attrs: { href: "/fridges" } }, [
+        _vm._v("Fridges")
+      ]),
+      _vm._v(" "),
       _c("a", { staticClass: "navbar-item", attrs: { href: "/ocr" } }, [
         _vm._v("OCR")
       ])
@@ -37320,7 +37326,7 @@ var staticRenderFns = [
             _vm._v("Login")
           ]),
           _vm._v(" "),
-          _c("form", { attrs: { action: "auth", method: "POST" } }, [
+          _c("form", { attrs: { action: "/logout", method: "POST" } }, [
             _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
               _vm._v("Logout")
             ])
@@ -37351,50 +37357,29 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "message" }, [
-    _c("div", { staticClass: "message-header" }, [_vm._v("OCR Receipt")]),
-    _vm._v(" "),
-    _c("div", { staticClass: "message-body" }, [
-      _c("div", { staticClass: "box" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "panel-body" }, [
-            _c(
-              "form",
-              {
-                attrs: { enctype: "multipart/form-data" },
-                on: {
-                  submit: function($event) {
-                    return _vm.ocr()
-                  }
-                }
-              },
-              [
-                _c("input", {
-                  staticClass: "file",
-                  attrs: { type: "file", name: "Select file" },
-                  on: {
-                    change: function($event) {
-                      return _vm.onFileSelected()
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "button is-primary is-fullwidth",
-                    on: {
-                      change: function($event) {
-                        return _vm.ocr()
-                      }
-                    }
-                  },
-                  [_vm._v("Upload")]
-                )
-              ]
-            )
-          ])
-        ])
+  return _c("div", { staticClass: "col-md-8" }, [
+    _c("div", { staticClass: "panel panel-default" }, [
+      _c("div", { staticClass: "panel-heading" }, [_vm._v("OCR Receipt")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel-body" }, [
+        _c("input", {
+          attrs: { type: "file", name: "", id: "" },
+          on: { change: _vm.onFileSelected }
+        }),
+        _vm._v(" "),
+        _c("button", { on: { click: _vm.onUpload } }, [_vm._v("Upload")])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "ul",
+          _vm._l(_vm.results, function(item, index) {
+            return _c("li", { key: index }, [
+              _vm._v(" " + _vm._s(item.LineText) + " ")
+            ])
+          }),
+          0
+        )
       ])
     ])
   ])
@@ -49782,8 +49767,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\George\Desktop\Projects\csc648-03-fa19-team106-georgebutler\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\George\Desktop\Projects\csc648-03-fa19-team106-georgebutler\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\james\Development\648\csc648-03-fa19-team106-georgebutler\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\james\Development\648\csc648-03-fa19-team106-georgebutler\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

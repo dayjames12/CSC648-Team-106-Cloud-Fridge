@@ -1,50 +1,49 @@
 <template>
-    <div class="message">
-        <div class="message-header">OCR Receipt</div>
-        <div class="message-body">
-            <div class="box">
-                <div class="container">
-                    <div class="panel-body">
-                        <form @submit="ocr()" enctype="multipart/form-data">
-                            <input class="file" type="file" name="Select file" v-on:change="onFileSelected()"/>
-                            <button class="button is-primary is-fullwidth" v-on:change="ocr()">Upload</button>
-                        </form>
-                    </div>
-                </div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">OCR Receipt</div>
+
+            <div class="panel-body">
+                <input type="file" @change="onFileSelected" name="" id="">
+                <button @click="onUpload">Upload</button>
+            </div>
+            <div>
+                <ul>
+                    <li v-for="(item, index) in results" :key="index"> {{ item.LineText }} </li>
+                </ul>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import axios from 'axios'
     export default {
         data(){
             return{
-                selectedFile:null
+                selectedFile:null,
+                results:null
             }
-            
         },
         methods:{
             onFileSelected(event){
                 this.selectedFile = event.target.files[0];
             },
-            ocr(){
-                let formData = new formData();
-                formData.append('file', this.selectedFile);
-                
-                axios.post( 'https://api.ocr.space/parse/image', '7930f4b52488957', formData,{
-                        headers: {
-                            'Content-Type': 'multipart/form-data'
-                        }
+            onUpload(){
+                const fd = new FormData();
+                fd.append("apikey","7930f4b52488957");
+                fd.append("isTable",'true');
+                fd.append("language","eng");
+                fd.append("detectOrientation","true");
+                fd.append("scale","true");
+                fd.append("isCreateSearchablePdf","true");
+                fd.append('image', this.selectedFile, this.selectedFile.name)
+                axios.post('https://api.ocr.space/parse/image', fd, {
+                })
+                .then(res => {
+                    console.log(res.data.ParsedResults[0].TextOverlay.Lines);
+                    this.results = res.data.ParsedResults[0].TextOverlay.Lines;
                     }
-                        ).then(function(){
-                            console.log('SUCCESS!!');
-                            
-                            })
-                        .catch(function(){
-                            console.log('FAILURE!!');
-                });
+                )
             }
         }
     }
