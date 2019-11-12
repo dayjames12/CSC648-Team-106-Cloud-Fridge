@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         $items = \App\Item::all();
+
         return view('home', ['items' => $items]);
     }
 }
