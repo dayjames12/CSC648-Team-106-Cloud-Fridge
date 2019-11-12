@@ -24,7 +24,7 @@ $body-size: 15px;
 
 $radius: 0;
 $radius-small: 0;
-$radius-large: 0;
+$radius-large:0;
 
 $subtitle-color: $grey;
 
@@ -39,6 +39,7 @@ $navbar-item-hover-background-color: rgba(#000, 0.1);
 $navbar-dropdown-arrow: $navbar-item-color;
 
 $bulmaswatch-import-font: true !default;
+
 
 $box-shadow: 0 0 0 1px $border;
 $card-shadow: 0 0 0 1px $border;
