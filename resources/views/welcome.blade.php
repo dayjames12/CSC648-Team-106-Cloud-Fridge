@@ -64,6 +64,21 @@
                     <h5 class="title is-5">11/4/19</h5>
                     <div class="content">Tomorrow is the due day for Milestone 3, so our group met at 12pm to finalize Milestone 3. The risk we had was we are not fully finished yet by the time we all met together.</div>
                 </div>
+                <div class="box">
+                    <h5 class="title is-5">11/5/19</h5>
+                    <div class="content">Everybody gathered in class time to fix our project database. The risk was that not everybody had their Database fixed into their machine. Most of our team members had difficulties with using an open-source web-server for databases called XAMPP. This risk is important because We need the database to store our information. We are currently resolving this issue by supporting team members who got XAMPP working and by going online to search solutions to help us. We had a member on our team that was able to get their database of XAMPP and tried his best to help those team members who was struggling.</div>
+                </div>
+                <div class="box">
+                    <h5 class="title is-5">11/7/19</h5>
+                    <div class="content">Group came to class together on explaining our group progress so far. There are many improvements that our group should work on. Some of the improvements that our team should think about is deciding which features should go on the nav bar, keep top nav bar for account related things, and adding unique features that is related to the type of food in the Fridge and we should do this by finding API to get this Information. There was also some UX that we should fix in our application as well. These Information that we received from our meeting today from our professor is important because we hope to use this to continue to improve our project. We hope to fix our project ASAP.</div>
+                </div>
+                <div class="box">
+                    <h5 class="title is-5">11/12/19</h5>
+                    <div class="content">
+                      After class, our team worked on the project and talked about how to  improve on our database of our project and describe what we all have implemented. Some of our team members aren't finished with everything on their part yet but that is ok. Whenever we had time after class, we put effort to make our app better. A risk that our team member are facing was we needed to get the receipt scanning working and to spent time to work on the recommendations we received from the
+                      professor last week and each of our team members are contributing by working on parts that we were critiqued on.
+                    </div>
+                </div>
             </article>
         </div>
 </section>
