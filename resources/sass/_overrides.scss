@@ -18,10 +18,10 @@
 }
 
 .button {
-  &.is-active,
-  &:active {
-    box-shadow: inset 9px 1px 4px rgba($grey-darker, 0.3);
-  }
+  // &.is-active,
+  // &:active {
+  //   box-shadow: inset 9px 1px 4px rgba($grey-darker, 0.3);
+  // }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
@@ -40,6 +40,9 @@
         background-color: darken($color, 10);
       }
     }
+    
+    border-radius: 5px;
+    
   }
 
   &.is-loading:after {
@@ -142,5 +145,6 @@
 
 .progress,
 .tag {
-  border-radius: $radius;
+  border-radius: 0;
 }
+

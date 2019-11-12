@@ -12449,9 +12449,17 @@ label.panel-block:hover {
   height: 2.534em;
 }
 
-.button.is-active,
-.button:active {
-  box-shadow: inset 9px 1px 4px rgba(34, 34, 34, 0.3);
+.button {
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
 }
 
 .button.is-white {
