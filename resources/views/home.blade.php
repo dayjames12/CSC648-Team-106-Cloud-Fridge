@@ -9,12 +9,12 @@
 <section class="section">
     <div class="container">
 
-        {{-- Attempt Search Box 1 --}}
+        {{-- Search box --}}
         <div class="block">
             <div class="field has-addons">
 
             <form method="GET" action="/items/search">
-            @csrf
+                @csrf
                 <div class="container">
                     <div class="field has-addons">
                         <div class="control">
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        {{-- Attempt Add Item Box 1 --}}
+        {{-- Add item --}}
         <div class="block">
             <div class="field has-addons">
                 <p class="control">
@@ -51,35 +51,28 @@
             </div>
         </div>
 
-        {{-- Attempt Inventory + Sort By style 1 --}}
-        {{-- 
-        <div class="block">
-            <div class="box">
-                <p class ="content is-medium">Inventory <button class="button is-light">Sort By</button></p>
-            </div>
-        </div>
-        --}}
-
-        {{-- Attempt Inventory + Sort By style 2 --}}
+        {{-- Sort by --}}
         <div class ="block">
             <div class="notification">
                 <h1 class="title">Inventory</h1>
-                <form>
-                    <div class="field">
-                        <label class="label">Sort By</label>
+                <div class="field">
+                    <label class="label">Sort By</label>
+                    <form method="POST" action="/items/sort">
+                        @csrf
                         <p class="control">
                             <span class="select">
-                                <select>
-                                    <option>Item Name</option>
-                                    <option>Expiration Date</option>
-                                    <option>Price</option>
+                                <select name="sort-by">
+                                    <option value="1">Item Name</option>
+                                    <option value="2">Expiration Date</option>
+                                    <option value="3">Quantity</option>
                                 </select>
                             </span>
+                            <input type="submit" value="Submit">
                         </p>
-                    </div>
-                </form>
+                    </form>
+                </div>
                    
-                {{-- Attempt at food list 2 --}}
+                {{-- Fridge inventory --}}
                 <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
                     <div class="tile is-vertical is-5">
                         <div class="tile is-parent is-vertical">
