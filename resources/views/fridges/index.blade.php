@@ -14,4 +14,7 @@
             </li>
         @endforeach
     </ul>
+    <div class="buttons">
+        <a class="button is-primary" href="/fridges/create">Create New Fridge</a>
+    </div>
 @endsection
