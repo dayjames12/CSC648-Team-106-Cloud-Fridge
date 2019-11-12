@@ -78,8 +78,7 @@
                     <div class="tile is-vertical is-5">
                         <div class="tile is-parent is-vertical">
 
-                            @foreach ($items as $item)
-                                
+                            @foreach ($items as $item)                                
                                 {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
                                 @php
                                     $expdate =  (Carbon\Carbon::now()->diffInDays(Carbon\Carbon::parse($item->expiration)->format('Y-m-d')))
