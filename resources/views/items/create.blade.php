@@ -81,7 +81,7 @@
                     </div>
 
                     <div>
-                        <input type="string" name="expiration" placeholder="Expiration date">
+                        <input type="date" name="expiration" placeholder="Expiration date">
                     </div>
 
                     <div>
