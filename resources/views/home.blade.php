@@ -78,7 +78,10 @@
                         <div class="tile is-parent is-vertical">
 
                             @foreach ($items as $item)
-                            <article class="tile is-child notification is-primary">
+                            {{-- Ternary. If exp date is less than 3 days, red tile. Otherwise, normal teal --}}
+                            <article class="title is-child notification {{ 
+                                (Carbon\Carbon::now()->diffInDays(Carbon\Carbon::parse($item->expiration)->format('Y-m-d'))) < 3
+                                ? 'is-danger' : 'is-primary' }}">
                                 
                                 {{-- Retrieve item id to delete when button is pressed --}}
                                 
