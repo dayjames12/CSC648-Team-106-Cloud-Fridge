@@ -116,7 +116,7 @@
         {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">
-                <a class="navbar-item is-expanded is-block has-text-centered">
+                <a class="navbar-item is-expanded is-block has-text-centered" href ="/home">
                     <span class="icon">
                         <i class="fas fa-home"></i>
                     </span>
