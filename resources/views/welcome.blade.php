@@ -2,11 +2,17 @@
 
 @section('content')
 <section>
-    <div class="hero is-primary">
+    <div class="hero is-info is-medium ">
         <div class="hero-body">
-            <div class="container">
+            <div class="container has-text-centered">
                 <h1 class="title">Cloud Fridge</h1>
-                <h2 class="subtitle">The easiest way to manage your fridge.</h2>
+                <h2 class="subtitle text-wrap">
+                
+                  The easiest way to manage your fridge. This application aims to make keeping track of what is in your fridge easy. 
+                  Just upload a picture of your receipt and you are ready to go!
+                
+                </h2>
+                
             </div>
         </div>
     </div>
