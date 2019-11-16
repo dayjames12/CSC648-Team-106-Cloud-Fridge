@@ -17,6 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Grocery List View */
+Route::get('/groceryList', function () {
+    return view('groceryList');
+});
+/* Grocery List View */
+Route::get('/recipe', function () {
+    return view('recipe');
+});
+/* Grocery List View */
+Route::get('/foodList', function () {
+    return view('foodList');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
