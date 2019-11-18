@@ -10,8 +10,8 @@
 <section class="section">
     <div class="container">
 
-    <?/* Need to improve this!!*/ ?>
     <h1>Food List add Here!!</h1>
+
       
     {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">

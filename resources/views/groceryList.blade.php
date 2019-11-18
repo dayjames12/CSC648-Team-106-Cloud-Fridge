@@ -11,7 +11,29 @@
     <div class="container">
 
     <?/* Need to improve this!!*/ ?>
-    <h1>Grocery List add Here!!</h1>
+    <h1><strong>Add Grocery List</strong></h1>
+
+    {{-- Search box --}}
+        <div class="block">
+            <div class="field has-addons">
+
+            <form method="GET" action="/items/search">
+                @csrf
+                <div class="container">
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input type="text" class="input" name="search" placeholder="Search Fridge...">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info">Search</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            </div>
+        </div>
+
       
     {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
