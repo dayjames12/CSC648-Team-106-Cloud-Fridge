@@ -93,6 +93,13 @@
                     Met during class to discuss on items needed to work on. A risk that some of our group members are facing are 3 group members have macbooks and are having trouble with accessing the database. However, all members of our team who uses Window computers was able to get access and make changes to the database. The students who have Macbook are able to resolve this problem through accessing their home window computer at home to help make edits to the project. Although some of our group members aren't able to work on the problem, we are able to discuss what needed to be done and once we get home, we can make changes immediately. 
                     </div>
                 </div>
+
+                <div class="box">
+                    <h5 class="title is-5">11/18/19</h5>
+                    <div class="content">
+                    Our entire group met up again on the day before class started to ensure all or most members of our group understand the instructions on implementing the project. Our group discuss what should be added and deleted. During our group meeting today and since everybody is together in-person, we mostly worked on implementing our project and allow time for members who are working together at a specific task to have a better understanding of who is doing which role.
+                    </div>
+                </div>
             </article>
         </div>
 </section>
