@@ -19,6 +19,7 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->integer('quantity');
             $table->string('expiration');
+            $table->string('item_list');
 
             $table->timestamps();
         });

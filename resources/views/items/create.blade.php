@@ -23,7 +23,7 @@
                         <div class="field">
                             <label class="label">Item Name</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input" type="text" placeholder="Text" required autocomplete="Name">
+                                <input class="input" type="text" placeholder="Text" name="name" required autocomplete="Name">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-utensils"></i>
                                 </span>
@@ -34,7 +34,7 @@
                         <div class="field">
                             <label class="label">Item Amount</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input" type="integer" placeholder="Amount" required autocomplete="Amount">
+                                <input class="input" type="integer" placeholder="Amount" name="quantity" required autocomplete="Amount">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-hashtag"></i>
                                 </span>
@@ -46,7 +46,7 @@
                         <div class="field">
                             <label class="label">Expiration Date</label>
                             <div class="control has-icons-left has-icons-right" >
-                                <input class="input" type="date" required autocomplete="Date">
+                                <input class="input" type="date" name="expiration" required autocomplete="Date">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-calendar"></i>
                                 </span>
@@ -63,7 +63,9 @@
                                 <button class="button is-link is-light">Cancel</button>
                             </div>
                         </div>
-                
+
+                        <input type="hidden" name="item_list" value="Fridge">
+
                     </form>
 
                 </div>
