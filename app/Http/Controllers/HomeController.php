@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $items = \App\Item::all();
+        $items = \App\Item::fridge()->get();
 
         return view('home', ['items' => $items]);
     }

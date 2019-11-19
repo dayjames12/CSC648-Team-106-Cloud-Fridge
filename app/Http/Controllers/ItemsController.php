@@ -19,6 +19,7 @@ class ItemsController extends Controller
         $item->name = $request->name;
         $item->quantity = $request->quantity;
         $item->expiration = $request->expiration;
+        $item->item_list = $request->item_list;
 
         $item->save();
 
@@ -43,10 +44,10 @@ class ItemsController extends Controller
                 $items = Item::all()->sortBy('name');
             }
             else if ($sort == '2') {
-                $items = Item::all();
+                $items = Item::all()->sortBy('expiration');
             }
             else if ($sort == '3') {
-                $items = Item::all();
+                $items = Item::all()->sortBy('quantity');
             }
 
         }
