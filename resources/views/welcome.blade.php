@@ -2,11 +2,17 @@
 
 @section('content')
 <section>
-    <div class="hero is-primary">
+    <div class="hero is-info is-medium ">
         <div class="hero-body">
-            <div class="container">
+            <div class="container has-text-centered">
                 <h1 class="title">Cloud Fridge</h1>
-                <h2 class="subtitle">The easiest way to manage your fridge.</h2>
+                <h2 class="subtitle text-wrap">
+                
+                  The easiest way to manage your fridge. This application aims to make keeping track of what is in your fridge easy. 
+                  Just upload a picture of your receipt and you are ready to go!
+                
+                </h2>
+                
             </div>
         </div>
     </div>
@@ -72,11 +78,26 @@
                     <h5 class="title is-5">11/7/19</h5>
                     <div class="content">Group came to class together on explaining our group progress so far. There are many improvements that our group should work on. Some of the improvements that our team should think about is deciding which features should go on the nav bar, keep top nav bar for account related things, and adding unique features that is related to the type of food in the Fridge and we should do this by finding API to get this Information. There was also some UX that we should fix in our application as well. These Information that we received from our meeting today from our professor is important because we hope to use this to continue to improve our project. We hope to fix our project ASAP.</div>
                 </div>
+
                 <div class="box">
                     <h5 class="title is-5">11/12/19</h5>
                     <div class="content">
                       After class, our team worked on the project and talked about how to  improve on our database of our project and describe what we all have implemented. Some of our team members aren't finished with everything on their part yet but that is ok. Whenever we had time after class, we put effort to make our app better. A risk that our team member are facing was we needed to get the receipt scanning working and to spent time to work on the recommendations we received from the
                       professor last week and each of our team members are contributing by working on parts that we were critiqued on.
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h5 class="title is-5">11/14/19</h5>
+                    <div class="content">
+                    Met during class to discuss on items needed to work on. A risk that some of our group members are facing are 3 group members have macbooks and are having trouble with accessing the database. However, all members of our team who uses Window computers was able to get access and make changes to the database. The students who have Macbook are able to resolve this problem through accessing their home window computer at home to help make edits to the project. Although some of our group members aren't able to work on the problem, we are able to discuss what needed to be done and once we get home, we can make changes immediately. 
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h5 class="title is-5">11/18/19</h5>
+                    <div class="content">
+                    Our entire group met up again on the day before class started to ensure all or most members of our group understand the instructions on implementing the project. Our group discuss what should be added and deleted. During our group meeting today and since everybody is together in-person, we mostly worked on implementing our project and allow time for members who are working together at a specific task to have a better understanding of who is doing which role.
                     </div>
                 </div>
             </article>
