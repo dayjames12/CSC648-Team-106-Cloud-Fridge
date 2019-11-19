@@ -23,7 +23,7 @@ class ItemsController extends Controller
 
         $item->save();
 
-        return redirect('/home');
+        return redirect($request->origin);
     }
 
     public function search(Request $request)
@@ -36,9 +36,9 @@ class ItemsController extends Controller
 
     public function sort()
     {
-        if(isset($_POST['sort-by'])) {
+        if(isset($_POST['sort_by'])) {
 
-            $sort = $_POST['sort-by'];
+            $sort = $_POST['sort_by'];
 
             if ($sort == '1') {
                 $items = Item::all()->sortBy('name');

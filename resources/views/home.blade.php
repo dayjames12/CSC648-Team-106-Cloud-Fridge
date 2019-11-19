@@ -47,7 +47,7 @@
         <div class="block">
             <div class="field has-addons">
                 <p class="control">
-                    <a href="/items/create" class="button is-info">Add Item</a>
+                    <a href="/items/create?origin=/home" class="button is-info">Add Item</a>
                 </p>
             </div>
         </div>
@@ -62,7 +62,7 @@
                         @csrf
                         <p class="control">
                             <span class="select">
-                                <select name="sort-by">
+                                <select name="sort_by">
                                     <option value="1">Item Name</option>
                                     <option value="2">Expiration Date</option>
                                     <option value="3">Quantity</option>
