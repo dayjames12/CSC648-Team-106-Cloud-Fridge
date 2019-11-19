@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemsTable extends Migration
+class AddItemListToItems extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
-            $table->bigIncrements('id');
-
-            $table->string('name');
-            $table->integer('quantity');
-            $table->string('expiration');
-
-            $table->timestamps();
+        Schema::table('items', function (Blueprint $table) {
+            $table->string('item_list')->after('expiration');
         });
     }
 
@@ -31,6 +25,8 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::table('items', function (Blueprint $table) {
+            $table->dropColumn('items_list');
+        });
     }
 }
