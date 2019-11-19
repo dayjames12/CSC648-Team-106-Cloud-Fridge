@@ -65,17 +65,19 @@
                         </div>
 
                         <?php
-                            if ($_GET['origin'] == '/home')
+                            $origin = $_GET['origin'];
+
+                            if ($origin == '/home')
                             {
                                 $item_list = 'Fridge';
                             }
-                            else if ($_GET['origin'] == '/groceryList')
+                            else if ($origin == '/groceryList')
                             {
                                 $item_list = 'Grocery list';
                             }
                         ?>
                         
-                        <input type="hidden" name="origin" value="<?php echo $_GET['origin'] ?>">  {{-- Original directory that made GET request --}}
+                        <input type="hidden" name="origin" value="<?php echo $origin ?>">  {{-- Original directory that made GET request --}}
                         <input type="hidden" name="item_list" value="<?php echo $item_list ?>">    {{-- List which item belongs to --}}
 
 
