@@ -16,6 +16,8 @@
 <body class="has-navbar-fixed-top">
     <div id="app">
         <navbar-component></navbar-component>
+        
+        @yield('content')
         <div class="container">
             <article class="message is-info">
                 <div class="message-header has-text-centered">
@@ -23,7 +25,6 @@
                 </div>
             </article>
         </div>
-        @yield('content')
     </div>
 </body>
 </html>

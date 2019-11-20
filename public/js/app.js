@@ -1870,6 +1870,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37250,7 +37261,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { staticClass: "navbar is-white is-fixed-top has-shadow" }, [
+  return _c("nav", { staticClass: "navbar is-info is-fixed-top is-bold" }, [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "navbar-brand" }, [
         _vm._m(0),
@@ -37318,13 +37329,21 @@ var staticRenderFns = [
         _c("div", { staticClass: "buttons" }, [
           _c(
             "a",
-            { staticClass: "button is-primary", attrs: { href: "/register" } },
+            {
+              staticClass: "button is-white is-outlined",
+              attrs: { href: "/register" }
+            },
             [_c("strong", [_vm._v("Sign up")])]
           ),
           _vm._v(" "),
-          _c("a", { staticClass: "button", attrs: { href: "/login" } }, [
-            _vm._v("Login")
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "button is-white is-outlined",
+              attrs: { href: "/login" }
+            },
+            [_c("strong", [_vm._v("Login")])]
+          ),
           _vm._v(" "),
           _c("form", { attrs: { action: "/logout", method: "POST" } }, [
             _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
