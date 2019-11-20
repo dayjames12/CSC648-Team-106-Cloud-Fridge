@@ -53,7 +53,7 @@
         </div>
 
         {{-- Sort by --}}
-        <div class ="block">
+        <div class ="container is-fluid">
             <div class="notification">
                 <h1 class="title">Inventory</h1>
                 <div class="field">
@@ -76,8 +76,9 @@
                 {{-- Fridge inventory --}}
                 <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
                     <div class="tile is-vertical is-5">
-                        <div class="tile is-parent is-vertical">
-
+                            <div class="tile is-parent is-vertical">
+                                
+                                
                             @foreach ($items as $item)                                
                                 {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
                                 @php
@@ -92,18 +93,51 @@
                                     <article class="title is-child notification is-primary">
                                 @endif
 
-                                {{-- Retrieve item id to delete when button is pressed --}}
-                                <form method="POST" action="/items/{{ $item->id }}">
-                                  {{ method_field('DELETE')}}
-                                  @csrf
-                                  <button class="delete" style="float: right;"></button>
-                                </form>
+                                {{-- Option menu for each individual item --}}
+                                <ul class="options" style ="float: right;">
+                                        <li>
+                                            <span class="icon align-right">
+                                                <i class="fas fa-ellipsis-v fa-2x"></i>
+                                            </span>
+                                            <ul>
+                                            {{-- Retrieve item id to delete when button is pressed --}}
+                                            <form method="POST" action="/items/{{ $item->id }}">
+                                                {{ method_field('DELETE')}}
+                                                <li> 
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus-circle fa-2x"></i>
+                                                    </span>
+                                                </li>
+                                                <li> 
+                                                    <span class="icon">
+                                                        <i class="fas fa-cart-plus fa-2x"></i>
+                                                    </span>
+                                                </li>
+                                              
+                                                <li>
+                                                    <span class="icon">
+                                                        <i class="fas fa-info-circle fa-2x"></i>
+                                                    </span>
+                                                </li>
+
+                                                @csrf
+                                                <button class="delete is-medium" style="float: right;"></button>
+                                                
+                                            </form>
+                                               
+                                            </ul>
+                                        
+                                        </li>
+                                      
+                                 </ul>
+                                
 
                                 <p class="title"> {{ $item->name }} </p>
                                 <p class="subtitle"> Expires on {{ $item->expiration }}</p>
                                 <div class="content">
                                     Quantity: {{ $item->quantity }}
                                 </div>
+                              
                             </article>
                             @endforeach
 
@@ -122,22 +156,20 @@
                     </span>
                     <p class="is-size-7">Inventory</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/groceryList">
+                <a class="navbar-item is-expanded is-block has-text-centered">
                     <i class="fa fa-list"></i>
                     <p class="is-size-7">Grocery List</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/recipe">
+                <a class="navbar-item is-expanded is-block has-text-centered">
                     <i class="fa fa-book"></i>
                     <p class="is-size-7">Recipe</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/foodList">
+                <a class="navbar-item is-expanded is-block has-text-centered">
                     <i class="fa fa-cookie-bite"></i>
                     <p class="is-size-7">Food List</p>
                 </a>
             </div>
         </nav>
-
-
     </div>
 </section>
 @endsection

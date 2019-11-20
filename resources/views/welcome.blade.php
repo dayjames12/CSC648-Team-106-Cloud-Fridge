@@ -18,12 +18,7 @@
     </div>
     <div class="container">
         <article class="message">
-            <div class="message-header">About the App</div>
-            <div class="message-body">
-                <div class="box">
-                    <p>This application aims to make keeping track of what is in your fridge easy. Just upload a picture of your receipt and you are ready to go!</p>
-                </div>
-            </div>
+
             <div class="message-header">About Us</div>
             <div class="message-body">
                 <div class="box">
