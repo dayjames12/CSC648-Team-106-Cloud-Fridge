@@ -22,7 +22,7 @@
             <div class="message-body">
                 <div class="box">
                     <p>Team Leader and Github Master - George Butler</p>
-                    <p>Scrum Master - Sydni Starling!</p>
+                    <p>Scrum Master - Sydni Starling</p>
                     <p>Back-End Lead - James Day</p>
                     <p>Front-End Developer - Raymond Gee</p>
                     <p>Front-End Lead - Aung Hein</p>
@@ -79,6 +79,23 @@
                       professor last week and each of our team members are contributing by working on parts that we were critiqued on.
                     </div>
                 </div>
+                <div class="box">
+                    <h5 class="title is-5">11/14/19</h5>
+                    <div class="content">
+                      After class, our team met to work on the applicaiton. We discussed about how to improve on our database and which features are 
+                      the most important to implement first. The DB is working on most group members computers and the front end is working opendir
+                      side bar menu display options.
+                    </div>
+                </div>
+                <div class="box">
+                    <h5 class="title is-5">11/21/19</h5>
+                    <div class="content">
+                      Our group came to class and discusssed what features/testing we need to complete for milestone 4.
+                        Set tasks for thanksgiving break and discussed what contributions we all can be making. 
+                       The recipe API is the main feature we are working on.
+                    </div>
+                </div>
+                
             </article>
         </div>
 </section>
