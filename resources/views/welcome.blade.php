@@ -22,7 +22,7 @@
             <div class="message-body">
                 <div class="box">
                     <p>Team Leader and Github Master - George Butler</p>
-                    <p>Scrum Master - Sydni Starling</p>
+                    <p>Scrum Master - Sydni Starling!</p>
                     <p>Back-End Lead - James Day</p>
                     <p>Front-End Developer - Raymond Gee</p>
                     <p>Front-End Lead - Aung Hein</p>
