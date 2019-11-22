@@ -6,28 +6,25 @@
 {{-- enables usage of bulma icons --}}
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-
 <section class="section">
     <div class="container">
 
         {{-- Search box --}}
         <div class="block">
             <div class="field has-addons">
-
-            <form method="GET" action="/items/search">
-                @csrf
-                <div class="container">
-                    <div class="field has-addons">
-                        <div class="control">
-                            <input type="text" class="input" name="search" placeholder="Search Fridge...">
-                        </div>
-                        <div class="control">
-                            <button class="button is-info">Search</a>
+                <form method="GET" action="/items/search">
+                    @csrf
+                    <div class="container">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input type="text" class="input" name="search" placeholder="Search Fridge...">
+                            </div>
+                            <div class="control">
+                                <button class="button is-info">Search</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
-
+                </form>
             </div>
         </div>
 
@@ -95,7 +92,7 @@
                                 {{-- Option menu for each individual item --}}
                                 <ul class="options" style ="float: right;">
                                     <li>
-                                        <span class="icon align-right">
+                                        <span class="icon align-right is-overlay">
                                             <i class="fas fa-ellipsis-v fa-2x"></i>
                                         </span>
                                         <ul>
@@ -130,14 +127,12 @@
                                         </ul>                                     
                                     </li>                                
                                 </ul>
-                                                                    
+                                               
                                 <p class="title is-4"> {{ $item->name }} </p>
                                 <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
-                                <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>
-                                
+                                <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>                          
                             </article>
                             @endforeach
-
                         </div>
                     </div>
                 </div>
