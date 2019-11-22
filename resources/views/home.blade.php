@@ -103,10 +103,14 @@
                                             {{-- Retrieve item id to delete when button is pressed --}}
                                             <form method="POST" action="/items/{{ $item->id }}">
                                                 {{ method_field('DELETE')}}
+
+                                                
                                                 <li> 
+                                                    
                                                     <span class="icon">
                                                         <i class="fas fa-plus-circle fa-2x"></i>
                                                     </span>
+                                                    
                                                 </li>
                                                 <li> 
                                                     <span class="icon">
@@ -156,15 +160,15 @@
                     </span>
                     <p class="is-size-7">Inventory</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered">
+                <a class="navbar-item is-expanded is-block has-text-centered" href="/groceryList">
                     <i class="fa fa-list"></i>
                     <p class="is-size-7">Grocery List</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered">
+                <a class="navbar-item is-expanded is-block has-text-centered" href="/recipe">
                     <i class="fa fa-book"></i>
                     <p class="is-size-7">Recipe</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered">
+                <a class="navbar-item is-expanded is-block has-text-centered" href="/foodList">
                     <i class="fa fa-cookie-bite"></i>
                     <p class="is-size-7">Food List</p>
                 </a>
