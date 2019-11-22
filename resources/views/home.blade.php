@@ -115,13 +115,17 @@
                                                 </button> 
 
                                                 <button class="button">
-                                                    <span class="icon is-small">
-                                                        <i class="fas fa-info circle fa-2x"></i>
+                                                    <span class="icon">
+                                                        <i class="fas fa-info-circle fa-2x"></i>
                                                     </span>
                                                 </button> 
 
                                                 @csrf
-                                                <button class="delete is-medium" style="float: right;"></button>
+                                                <button class="button">
+                                                    <span class="icon">
+                                                        <i class="fas fa-trash-alt fa-2x"></i>
+                                                    </span>
+                                                </button>
                                             </form>
                                         </ul>                                     
                                     </li>                                
