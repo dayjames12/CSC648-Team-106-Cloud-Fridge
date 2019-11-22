@@ -53,7 +53,7 @@
         </div>
 
         {{-- Sort by --}}
-        <div class ="container is-fluid">
+        <div class ="block">
             <div class="notification">
                 <h1 class="title">Inventory</h1>
                 <div class="field">
@@ -78,7 +78,6 @@
                     <div class="tile is-vertical is-5">
                             <div class="tile is-parent is-vertical">
                                 
-                                
                             @foreach ($items as $item)                                
                                 {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
                                 @php
@@ -92,52 +91,46 @@
                                 @else
                                     <article class="title is-child notification is-primary">
                                 @endif
-
+                                
                                 {{-- Option menu for each individual item --}}
                                 <ul class="options" style ="float: right;">
-                                        <li>
-                                            <span class="icon align-right">
-                                                <i class="fas fa-ellipsis-v fa-2x"></i>
-                                            </span>
-                                            <ul>
+                                    <li>
+                                        <span class="icon align-right">
+                                            <i class="fas fa-ellipsis-v fa-2x"></i>
+                                        </span>
+                                        <ul>
                                             {{-- Retrieve item id to delete when button is pressed --}}
                                             <form method="POST" action="/items/{{ $item->id }}">
                                                 {{ method_field('DELETE')}}
-                                                <li> 
+                                                <button class="button">
                                                     <span class="icon">
                                                         <i class="fas fa-plus-circle fa-2x"></i>
                                                     </span>
-                                                </li>
-                                                <li> 
+                                                </button> 
+
+                                                <button class="button">
                                                     <span class="icon">
                                                         <i class="fas fa-cart-plus fa-2x"></i>
                                                     </span>
-                                                </li>
-                                              
-                                                <li>
-                                                    <span class="icon">
-                                                        <i class="fas fa-info-circle fa-2x"></i>
+                                                </button> 
+
+                                                <button class="button">
+                                                    <span class="icon is-small">
+                                                        <i class="fas fa-info circle fa-2x"></i>
                                                     </span>
-                                                </li>
+                                                </button> 
 
                                                 @csrf
                                                 <button class="delete is-medium" style="float: right;"></button>
-                                                
                                             </form>
-                                               
-                                            </ul>
-                                        
-                                        </li>
-                                      
-                                 </ul>
+                                        </ul>                                     
+                                    </li>                                
+                                </ul>
+                                                                    
+                                <p class="title is-4"> {{ $item->name }} </p>
+                                <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
+                                <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>
                                 
-
-                                <p class="title"> {{ $item->name }} </p>
-                                <p class="subtitle"> Expires on {{ $item->expiration }}</p>
-                                <div class="content">
-                                    Quantity: {{ $item->quantity }}
-                                </div>
-                              
                             </article>
                             @endforeach
 
