@@ -19,13 +19,17 @@ Route::get('/', function () {
 
 /* Grocery List View */
 Route::get('/groceryList', function () {
-    return view('groceryList');
+    $items = \App\Item::groceryList()->get();
+
+    return view('groceryList', ['items' => $items]);
 });
-/* Grocery List View */
+Route::post('/groceryList', 'ItemsController@store');
+
+/* Recipe View */
 Route::get('/recipe', function () {
     return view('recipe');
 });
-/* Grocery List View */
+/* Food Report View */
 Route::get('/foodList', function () {
     return view('foodList');
 });

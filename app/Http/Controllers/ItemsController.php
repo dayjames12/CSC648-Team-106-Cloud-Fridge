@@ -23,7 +23,7 @@ class ItemsController extends Controller
 
         $item->save();
 
-        return redirect('/home');
+        return redirect($request->origin);
     }
 
     public function search(Request $request)
@@ -34,22 +34,18 @@ class ItemsController extends Controller
         return view('home', ['items' => $items]);
     }
 
-    public function sort()
+    public function sort(Request $request)
     {
-        if(isset($_POST['sort-by'])) {
+        $sort = $request->sort_by;
 
-            $sort = $_POST['sort-by'];
-
-            if ($sort == '1') {
-                $items = Item::all()->sortBy('name');
-            }
-            else if ($sort == '2') {
-                $items = Item::all()->sortBy('expiration');
-            }
-            else if ($sort == '3') {
-                $items = Item::all()->sortBy('quantity');
-            }
-
+        if ($sort == '1') {
+            $items = Item::all()->sortBy('name');
+        }
+        else if ($sort == '2') {
+            $items = Item::all()->sortBy('expiration');
+        }
+        else if ($sort == '3') {
+            $items = Item::all()->sortBy('quantity');
         }
 
         return view('home', ['items' => $items]);

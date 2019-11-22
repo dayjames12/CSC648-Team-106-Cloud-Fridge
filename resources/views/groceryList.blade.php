@@ -34,7 +34,53 @@
             </div>
         </div>
 
-      
+    {{-- Add item --}}
+    <div class="block">
+        <div class="field has-addons">
+            <p class="control">
+                <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
+            </p>
+        </div>
+    </div>
+    
+    {{-- Fridge inventory --}}
+    <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
+        <div class="tile is-vertical is-5">
+            <div class="tile is-parent is-vertical">
+
+                @foreach ($items as $item)                                
+                    {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
+                    @php
+                        $expdate =  (Carbon\Carbon::now()->diffInDays(Carbon\Carbon::parse($item->expiration)->format('Y-m-d')))
+                    @endphp
+
+                    @if ($expdate < 3)
+                        <article class="title is-child notification is-danger">
+                    @elseif ($expdate > 3 && $expdate < 7)
+                        <article class="title is-child notification is-warning">
+                    @else
+                        <article class="title is-child notification is-primary">
+                    @endif
+
+                    {{-- Retrieve item id to delete when button is pressed --}}
+                    <form method="POST" action="/items/{{ $item->id }}">
+                      {{ method_field('DELETE')}}
+                      @csrf
+                      <button class="delete" style="float: right;"></button>
+                    </form>
+
+                    <p class="title"> {{ $item->name }} </p>
+                    <p class="subtitle"> Expires on {{ $item->expiration }}</p>
+                    <div class="content">
+                        Quantity: {{ $item->quantity }}
+                    </div>
+                </article>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+
     {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">

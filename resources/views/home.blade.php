@@ -47,7 +47,7 @@
         <div class="block">
             <div class="field has-addons">
                 <p class="control">
-                    <a href="/items/create" class="button is-info">Add Item</a>
+                    <a href="/items/create?origin=/home" class="button is-info">Add Item</a>
                 </p>
             </div>
         </div>
@@ -62,7 +62,7 @@
                         @csrf
                         <p class="control">
                             <span class="select">
-                                <select name="sort-by">
+                                <select name="sort_by">
                                     <option value="1">Item Name</option>
                                     <option value="2">Expiration Date</option>
                                     <option value="3">Quantity</option>
@@ -160,15 +160,15 @@
                     </span>
                     <p class="is-size-7">Inventory</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/groceryList">
+                <a class="navbar-item is-expanded is-block has-text-centered" href= "/groceryList">
                     <i class="fa fa-list"></i>
                     <p class="is-size-7">Grocery List</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/recipe">
+                <a class="navbar-item is-expanded is-block has-text-centered" href= "/recipe">
                     <i class="fa fa-book"></i>
                     <p class="is-size-7">Recipe</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/foodList">
+                <a class="navbar-item is-expanded is-block has-text-centered" href= "/foodList">
                     <i class="fa fa-cookie-bite"></i>
                     <p class="is-size-7">Food List</p>
                 </a>
