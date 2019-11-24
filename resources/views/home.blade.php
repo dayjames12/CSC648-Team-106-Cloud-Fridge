@@ -103,10 +103,14 @@
                                             {{-- Retrieve item id to delete when button is pressed --}}
                                             <form method="POST" action="/items/{{ $item->id }}">
                                                 {{ method_field('DELETE')}}
+
+                                                
                                                 <li> 
+                                                    
                                                     <span class="icon">
                                                         <i class="fas fa-plus-circle fa-2x"></i>
                                                     </span>
+                                                    
                                                 </li>
                                                 <li> 
                                                     <span class="icon">
