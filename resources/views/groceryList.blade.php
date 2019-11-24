@@ -69,11 +69,9 @@
                       <button class="delete" style="float: right;"></button>
                     </form>
 
-                    <p class="title"> {{ $item->name }} </p>
-                    <p class="subtitle"> Expires on {{ $item->expiration }}</p>
-                    <div class="content">
-                        Quantity: {{ $item->quantity }}
-                    </div>
+                    <p class="title is-4"> {{ $item->name }} </p>
+                    <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
+                    <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p> 
                 </article>
                 @endforeach
 
