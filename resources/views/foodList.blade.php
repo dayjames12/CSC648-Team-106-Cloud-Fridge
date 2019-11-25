@@ -12,7 +12,102 @@
 
     <h1>Food List add Here!!</h1>
 
-      
+    
+{{--Most of This page code div block came from home.blade.php but feel like there should be changes to it, feel free to change if nescessary--}}
+    {{-- Sort by --}}
+        <div class ="block">
+            <div class="notification">
+                <h1 class="title">Inventory</h1>
+                <div class="field">
+                    <label class="label">Sort By</label>
+                    <form method="POST" action="/items/sort">
+                        @csrf
+                        <p class="control">
+                            <span class="select">
+                                <select name="sort_by">
+                                    <option value="1">Item Name</option>
+                                    <option value="2">Expiration Date</option>
+                                    <option value="3">Quantity</option>
+                                </select>
+                            </span>
+                            <input type="submit" value="Submit">
+                        </p>
+                    </form>
+                </div>
+                   
+                {{-- Fridge inventory --}}
+                <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
+                    <div class="tile is-vertical is-5">
+                            <div class="tile is-parent is-vertical">
+                                
+                            @foreach ($items as $item)                                
+                                {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
+                                @php
+                                    $expdate =  (Carbon\Carbon::now()->diffInDays(Carbon\Carbon::parse($item->expiration)->format('Y-m-d')))
+                                @endphp
+
+                                @if ($expdate < 3)
+                                    <article class="title is-child notification is-danger">
+                                @elseif ($expdate > 3 && $expdate < 7)
+                                    <article class="title is-child notification is-warning">
+                                @else
+                                    <article class="title is-child notification is-primary">
+                                @endif
+                                
+                                {{-- Option menu for each individual item --}}
+                                <ul class="options" style ="float: right;">
+                                    <li>
+                                        <span class="icon align-right is-overlay">
+                                            <i class="fas fa-ellipsis-v fa-2x"></i>
+                                        </span>
+                                        <ul>
+                                            {{-- Retrieve item id to delete when button is pressed --}}
+                                            <form method="POST" action="/items/{{ $item->id }}">
+                                                {{ method_field('DELETE')}}
+                                                <button class="button">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus-circle fa-2x"></i>
+                                                    </span>
+                                                </button> 
+
+                                                <button class="button">
+                                                    <span class="icon">
+                                                        <i class="fas fa-cart-plus fa-2x"></i>
+                                                    </span>
+                                                </button> 
+
+                                                <button class="button">
+                                                    <span class="icon">
+                                                        <i class="fas fa-info-circle fa-2x"></i>
+                                                    </span>
+                                                </button> 
+
+                                                @csrf
+                                                <button class="button">
+                                                    <span class="icon">
+                                                        <i class="fas fa-trash-alt fa-2x"></i>
+                                                    </span>
+                                                </button>
+                                            </form>
+                                        </ul>                                     
+                                    </li>                                
+                                </ul>
+                                               
+                                <p class="title is-4"> {{ $item->name }} </p>
+                                <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
+                                <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>                          
+                            </article>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+
     {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">
