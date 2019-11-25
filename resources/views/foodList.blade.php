@@ -12,6 +12,24 @@
 
     <h1>Food List add Here!!</h1>
 
+    {{-- Search box --}}
+        <div class="block">
+            <div class="field has-addons">
+                <form method="GET" action="/items/search">
+                    @csrf
+                    <div class="container">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input type="text" class="input" name="search" placeholder="Search Fridge...">
+                            </div>
+                            <div class="control">
+                                <button class="button is-info">Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     
 {{--Most of This page code div block came from home.blade.php but feel like there should be changes to it, feel free to change if nescessary--}}
     {{-- Sort by --}}
