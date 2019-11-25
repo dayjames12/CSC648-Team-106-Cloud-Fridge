@@ -10,9 +10,21 @@
 <section class="section">
     <div class="container">
 
-    <h1>Recipe add Here!!</h1>
+    <h1>Recipe</h1>
 
-    {{--Edit recipe Here --}}
+    {{--Still need to work on Edit of recipe Here --}}
+    {{-- Attempt Upload Receipt Box 1 --}}
+        <div class="block">
+            <div class="field has-addons">
+                <p class="control">
+                    <input type="text" class="input" placeholder="Upload Receipt...">
+                </p>
+                <p class="control">
+                    <a href="" class="button is-info">Upload</a>
+                </p>
+            </div>
+        </div>
+
       
     {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
