@@ -120,6 +120,18 @@
                        The recipe API is the main feature we are working on.
                      </div>
                 </div>
+
+                <div class="box">
+                    <h5 class="title is-5">12/3/19</h5>
+                    <div class="content">
+
+                    After the thanksgiving break, our group recap everything else that needed to be done in order to submit our
+                    project in the next week or so. Our Fridge application is almost close of completion and we needed to review a 
+                    couple more items to be fully finished. Some of our team members met up during class and after class to try our
+                    best to finish as much as we can. Overall, everybody in our team are very happy that we get to know each other 
+                    throughout the semester and we get the chance to understand more of what it met to become a better Software Engineer.
+                     </div>
+                </div>
             </article>
         </div>
 </section>
