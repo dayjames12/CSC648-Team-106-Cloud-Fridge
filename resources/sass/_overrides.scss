@@ -74,6 +74,11 @@
   }
 }
 
+// Color for the background of the food items
+.notification .is-primary{
+  background-color:#5ba4de;
+}
+
 .navbar {
   &.is-transparent {
     background-color: transparent;
@@ -149,6 +154,9 @@
 }
 
 
+
+
+
 ul.options {
   text-align: left;
   display: inline;
@@ -164,7 +172,7 @@ ul li {
   display: inline-block;
   margin-right: -4px;
   position: relative;
-  padding: 70px 10px;
+  padding: 30px 5px;
   background: transparent;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -174,7 +182,8 @@ ul li {
   transition: all 0.2s;
 }
 ul li:hover {
-  background: #555;
+  border-radius: 10px;
+  background: rgb(59, 117, 139);
   color: transparent;
 }
 ul li ul {

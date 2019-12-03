@@ -40,10 +40,10 @@
 
         </div>
 
-        <div class="container">
-            <div class="notification">
-                <div class ="tile is-ancestor">
-                    <div class="tile is-parent ">
+        <div class="container has-text-centered">
+            <div class="notification" style="border-radius: 25px;">
+                <!-- <div class ="tile is-ancestor">
+                    <div class="tile is-parent">
                         <div class= "tile is-child box">
                             <p>Tile 1</p>
                         </div>
@@ -51,18 +51,34 @@
                         
                         
                     </div>
-                    <div class="tile is-parent ">
+                    <div class="tile is-parent">
                         <div class= "tile is-child box">
-                            <p>Tile 2</p>
+                            <div class="">
+                                <p>Tile 2</p>
+                            </div>
                         </div>
-
-                        
-                        
                     </div>
 
                 
-                </div>
+                </div> -->
+                <div class="columns is-centered is-vcentered">
+                    <div class="column is-half">
+                        <div>
+                            <h1 class="title is-2"> Testing something</h1>
+                        </div>
+                    </div>
+                    <div class="column is-half is-narrow">
+                        <div class="placeHolder" >
+                            <figure class="image is-128x128">
+                                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                            </figure>
+                        </div>
+                    </div>
 
+
+
+
+                </div>
 
 
             </div>
