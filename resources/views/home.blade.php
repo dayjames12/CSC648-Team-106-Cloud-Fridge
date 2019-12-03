@@ -49,9 +49,10 @@
             </div>
         </div>
 
+        
         {{-- Sort by --}}
         <div class ="block">
-            <div class="notification" style="background-color: rgb(134, 241, 255); border-radius: 15px;">
+            <div class="notification" style="background-color: rgb(120, 239, 255); border-radius: 15px;">
                 <h1 class="title" style="color:white;">Inventory</h1>
                 <div class="field">
                     <label class="label" style="color:white;">Sort By</label>
