@@ -51,10 +51,10 @@
 
         {{-- Sort by --}}
         <div class ="block">
-            <div class="notification">
-                <h1 class="title">Inventory</h1>
+            <div class="notification" style="background-color: rgb(134, 241, 255); border-radius: 15px;">
+                <h1 class="title" style="color:white;">Inventory</h1>
                 <div class="field">
-                    <label class="label">Sort By</label>
+                    <label class="label" style="color:white;">Sort By</label>
                     <form method="POST" action="/items/sort">
                         @csrf
                         <p class="control">
@@ -69,11 +69,12 @@
                         </p>
                     </form>
                 </div>
-                   
+                
+                <!-- background color = rgb(134, 241, 255) -->
                 {{-- Fridge inventory --}}
                 <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
                     <div class="tile is-vertical is-5">
-                            <div class="tile is-parent is-vertical">
+                        <div class="tile is-parent is-vertical">
                                 
                             @foreach ($items as $item)                                
                                 {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
@@ -82,17 +83,17 @@
                                 @endphp
 
                                 @if ($expdate < 3)
-                                    <article class="title is-child notification is-danger">
+                                    <article class="title is-child notification is-danger" style="border-radius:15px;">
                                 @elseif ($expdate > 3 && $expdate < 7)
-                                    <article class="title is-child notification is-warning">
+                                    <article class="title is-child notification is-warning"style="border-radius:15px;">
                                 @else
-                                    <article class="title is-child notification is-primary">
+                                    <article class="title is-child notification is-primary"style="border-radius:15px;">
                                 @endif
                                 
                                 {{-- Option menu for each individual item --}}
                                 <ul class="options" style ="float: right;">
                                     <li>
-                                        <span class="icon align-right is-overlay">
+                                        <span class="icon align-right">
                                             <i class="fas fa-ellipsis-v fa-2x"></i>
                                         </span>
                                         <ul>
