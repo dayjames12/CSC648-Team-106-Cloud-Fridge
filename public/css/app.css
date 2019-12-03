@@ -12676,6 +12676,10 @@ label.panel-block:hover {
   text-decoration: underline;
 }
 
+.notification .is-primary {
+  background-color: #5ba4de;
+}
+
 .navbar.is-transparent {
   background-color: transparent;
 }
@@ -12835,7 +12839,7 @@ ul li {
   display: inline-block;
   margin-right: -4px;
   position: relative;
-  padding: 70px 10px;
+  padding: 30px 5px;
   background: transparent;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -12843,7 +12847,8 @@ ul li {
 }
 
 ul li:hover {
-  background: #555;
+  border-radius: 10px;
+  background: #3b758b;
   color: transparent;
 }
 
