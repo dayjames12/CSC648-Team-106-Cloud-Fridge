@@ -6,15 +6,16 @@
 {{-- enables usage of bulma icons --}}
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
+
 <section class="section">
     <div class="container">
 
-        {{-- Attempt Search Box 1 --}}
+        {{-- Search box --}}
         <div class="block">
             <div class="field has-addons">
 
             <form method="GET" action="/items/search">
-            @csrf
+                @csrf
                 <div class="container">
                     <div class="field has-addons">
                         <div class="control">
@@ -42,7 +43,7 @@
             </div>
         </div>
 
-        {{-- Attempt Add Item Box 1 --}}
+        {{-- Add item --}}
         <div class="block">
             <div class="field has-addons">
                 <p class="control">
@@ -51,44 +52,47 @@
             </div>
         </div>
 
-        {{-- Attempt Inventory + Sort By style 1 --}}
-        {{-- 
-        <div class="block">
-            <div class="box">
-                <p class ="content is-medium">Inventory <button class="button is-light">Sort By</button></p>
-            </div>
-        </div>
-        --}}
-
-        {{-- Attempt Inventory + Sort By style 2 --}}
+        {{-- Sort by --}}
         <div class ="block">
             <div class="notification">
                 <h1 class="title">Inventory</h1>
-                <form>
-                    <div class="field">
-                        <label class="label">Sort By</label>
+                <div class="field">
+                    <label class="label">Sort By</label>
+                    <form method="POST" action="/items/sort">
+                        @csrf
                         <p class="control">
                             <span class="select">
-                                <select>
-                                    <option>Item Name</option>
-                                    <option>Expiration Date</option>
-                                    <option>Price</option>
+                                <select name="sort-by">
+                                    <option value="1">Item Name</option>
+                                    <option value="2">Expiration Date</option>
+                                    <option value="3">Quantity</option>
                                 </select>
                             </span>
+                            <input type="submit" value="Submit">
                         </p>
-                    </div>
-                </form>
+                    </form>
+                </div>
                    
-                {{-- Attempt at food list 2 --}}
+                {{-- Fridge inventory --}}
                 <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
                     <div class="tile is-vertical is-5">
                         <div class="tile is-parent is-vertical">
 
-                            @foreach ($items as $item)
-                            <article class="tile is-child notification is-primary">
-                                
+                            @foreach ($items as $item)                                
+                                {{-- tile is red if less than 3 days, yellow if less than 7 && >3, teal otherwise  --}}
+                                @php
+                                    $expdate =  (Carbon\Carbon::now()->diffInDays(Carbon\Carbon::parse($item->expiration)->format('Y-m-d')))
+                                @endphp
+
+                                @if ($expdate < 3)
+                                    <article class="title is-child notification is-danger">
+                                @elseif ($expdate > 3 && $expdate < 7)
+                                    <article class="title is-child notification is-warning">
+                                @else
+                                    <article class="title is-child notification is-primary">
+                                @endif
+
                                 {{-- Retrieve item id to delete when button is pressed --}}
-                                
                                 <form method="POST" action="/items/{{ $item->id }}">
                                   {{ method_field('DELETE')}}
                                   @csrf
@@ -112,7 +116,7 @@
         {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">
-                <a class="navbar-item is-expanded is-block has-text-centered">
+                <a class="navbar-item is-expanded is-block has-text-centered" href ="/home">
                     <span class="icon">
                         <i class="fas fa-home"></i>
                     </span>
