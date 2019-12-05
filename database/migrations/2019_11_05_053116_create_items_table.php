@@ -15,12 +15,12 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('fridge_id');
             $table->string('name');
             $table->integer('quantity');
-            $table->integer('date');
-            $table->string('expiration');
             $table->double('price');
-            $table->timestamps();
+            $table->date('expiration_date');
+            $table->timestamps(); //can use timestamp for current date?
         });
     }
 

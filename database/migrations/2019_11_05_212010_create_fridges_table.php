@@ -15,8 +15,8 @@ class CreateFridgesTable extends Migration
     {
         Schema::create('fridges', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('user_id');
             $table->string('name');
-            $table->json('items')->nullable();//json going to be serialized?
             $table->string('creator');//owner of fridge
             $table->string('allowed')->nullable();//users of fridge
             $table->timestamps();

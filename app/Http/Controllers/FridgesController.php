@@ -17,7 +17,7 @@ class FridgesController extends Controller
     }
 
     public function show(Fridge $fridge){
-        return view('fridges.show', compact('fridges'));
+        return view('fridges.show', compact('fridge'));
     }
 
     public function store(){
@@ -32,7 +32,7 @@ class FridgesController extends Controller
     }
 
     public function edit(Fridge $fridge){
-        return view('fridges.edit',compact('fridges'));
+        return view('fridges.edit',compact('fridge'));
     }
 
     public function update(Fridge $fridge){

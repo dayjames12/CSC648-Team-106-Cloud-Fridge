@@ -18,7 +18,7 @@ class ItemsController extends Controller
     }
 
     public function show(Item $item){
-        return view('items.show', compact('items'));
+        return view('items.show', compact('item'));
     }
 
     public function store(Request $request){
@@ -62,7 +62,7 @@ class ItemsController extends Controller
     }
 
     public function edit(Item $item){
-        return view('items.edit', comapct('items'));
+        return view('items.edit', comapct('item'));
     }
 
     public function update(Item $item){
