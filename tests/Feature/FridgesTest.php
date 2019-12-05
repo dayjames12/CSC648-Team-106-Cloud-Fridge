@@ -18,7 +18,7 @@ class FridgesTest extends TestCase
         $this->actingAs(factory('App\User')->create());
         
         //when they hit endpoint /fridges/create 
-        $this->post('/fridges/create',[
+        $this->get('/fridges/create',[
             'name' => 'Acme',
         ]);
         
