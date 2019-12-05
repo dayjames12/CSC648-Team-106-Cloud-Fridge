@@ -17,7 +17,7 @@ class FridgesController extends Controller
     }
 
     public function show(Fridge $fridge){
-        return view('fridges.show',compact('fridge'));
+        return view('fridges.show', compact('fridge'));
     }
 
     public function store(){
