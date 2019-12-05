@@ -47,6 +47,7 @@
         <div class ="block">
             <div class="notification" style="background-color: rgb(120, 239, 255); border-radius: 15px;">
                 <h1 class="title" style="color:black;">All grocery items</h1>
+
                 <!-- background color = rgb(134, 241, 255) -->
                 {{-- Fridge inventory --}}
                 <div class="tile is-ancestor"> {{-- wraps up the tiles in a grid of tiles --}}
@@ -60,11 +61,11 @@
                                 @endphp
 
                                 @if ($expdate < 3)
-                                    <article class="title is-child notification is-danger" style="border-radius:15px;">
-                                @elseif ($expdate > 3 && $expdate < 7)
-                                    <article class="title is-child notification is-warning"style="border-radius:15px;">
+                                    <article class="title is-child notification is-danger" style="border-radius:15px; color:black;">
+                                @elseif ($expdate >= 3 && $expdate < 7)
+                                    <article class="title is-child notification is-warning" style="border-radius:15px; color:black;">
                                 @else
-                                    <article class="title is-child notification is-primary"style="border-radius:15px;">
+                                    <article class="title is-child notification is-primary" style="border-radius:15px; color:black;">
                                 @endif
                                 
                                 {{-- Option menu for each individual item --}}
@@ -108,7 +109,8 @@
                                                
                                 <p class="title is-4"> {{ $item->name }} </p>
                                 <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
-                                <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>                          
+                                <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>  
+                                                        
                             </article>
                             @endforeach
                         </div>
