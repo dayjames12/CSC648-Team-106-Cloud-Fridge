@@ -17,6 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Grocery List View */
+Route::get('/groceryList', function () {
+    $items = \App\Item::groceryList()->get();
+
+    return view('groceryList', ['items' => $items]);
+});
+Route::post('/groceryList', 'ItemsController@store');
+
+/* Recipe View */
+Route::get('/recipe', function () {
+    return view('recipe');
+});
+/* Food Report View */
+Route::get('/foodList', function () {
+    return view('foodList');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

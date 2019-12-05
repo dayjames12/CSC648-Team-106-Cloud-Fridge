@@ -74,6 +74,11 @@
   }
 }
 
+// Color for the background of the food items
+.notification .is-primary{
+  background-color:#5ba4de;
+}
+
 .navbar {
   &.is-transparent {
     background-color: transparent;
@@ -148,3 +153,65 @@
   border-radius: 0;
 }
 
+
+
+
+
+ul.options {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  //padding: 15px 4px 17px 0;
+  list-style: none;
+  // -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  // -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  //box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 30px 5px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+ul li:hover {
+  border-radius: 10px;
+  background: rgb(59, 117, 139);
+  color: transparent;
+}
+ul li ul {
+  padding: 0;
+  top: 0px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: #555; 
+  display: inline; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: inline;
+  opacity: 1;
+  visibility: visible;
+}
