@@ -28,18 +28,6 @@
             </div>
         </div>
 
-        {{-- Attempt Upload Receipt Box 1 --}}
-        <div class="block">
-            <div class="field has-addons">
-                <p class="control">
-                    <input type="text" class="input" placeholder="Upload Receipt...">
-                </p>
-                <p class="control">
-                    <a href="" class="button is-info">Upload</a>
-                </p>
-            </div>
-        </div>
-
         {{-- Add item --}}
         <div class="block">
             <div class="field has-addons">
@@ -53,9 +41,9 @@
         {{-- Sort by --}}
         <div class ="block">
             <div class="notification" style="background-color: rgb(120, 239, 255); border-radius: 15px;">
-                <h1 class="title" style="color:white;">Inventory</h1>
+                <h1 class="title" style="color:black;">Inventory</h1>
                 <div class="field">
-                    <label class="label" style="color:white;">Sort By</label>
+                    <label class="label" style="color:black;">Sort By</label>
                     <form method="POST" action="/items/sort">
                         @csrf
                         <p class="control">
