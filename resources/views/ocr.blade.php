@@ -3,5 +3,6 @@
 @section('title','OCR')
 
 @section('content')
-    <ocr-component><ocr-component>
-@endsection 
+<ocr-component>
+</ocr-component>
+@endsection
