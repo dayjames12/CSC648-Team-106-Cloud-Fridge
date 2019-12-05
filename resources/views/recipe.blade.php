@@ -10,10 +10,10 @@
 <section class="section">
     <div class="container">
 
-    <h1>Recipe</h1>
+        <h1>Recipe</h1>
 
-    {{--Still need to work on Edit of recipe Here --}}
-    {{-- Attempt Upload Receipt Box 1 --}}
+        {{--Still need to work on Edit of recipe Here --}}
+        {{-- Attempt Upload Receipt Box 1 --}}
         <div class="block">
             <div class="field has-addons">
                 <p class="control">
@@ -25,11 +25,11 @@
             </div>
         </div>
 
-      
-    {{-- Bottom nav bar attempt 1 --}}
+
+        {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">
-                <a class="navbar-item is-expanded is-block has-text-centered" href ="/home">
+                <a class="navbar-item is-expanded is-block has-text-centered" href="/home">
                     <span class="icon">
                         <i class="fas fa-home"></i>
                     </span>
@@ -48,4 +48,3 @@
     </div>
 </section>
 @endsection
-
