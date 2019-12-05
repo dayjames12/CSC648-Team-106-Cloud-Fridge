@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-<<<<<<< HEAD
     protected $guarded = [];
-}
-=======
     /*
      * Scope a query to only include fridge items
      *
@@ -30,4 +27,3 @@ class Item extends Model
         return $query->where('item_list', '=', 'Grocery list');
     }
 }
->>>>>>> upstream/master
