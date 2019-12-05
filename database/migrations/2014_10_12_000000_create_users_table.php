@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('fridge')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -35,7 +34,7 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users');
     }
 
-    public function fridge(){
-        return $this->hasOne('fridge');
-    }
+    // public function fridge(){
+    //     return $this->hasOne('fridge');
+    // }
 }

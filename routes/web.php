@@ -19,13 +19,17 @@ Route::get('/', function () {
 
 /* Grocery List View */
 Route::get('/groceryList', function () {
-    return view('groceryList');
+    $items = \App\Item::groceryList()->get();
+
+    return view('groceryList', ['items' => $items]);
 });
-/* Grocery List View */
+Route::post('/groceryList', 'ItemsController@store');
+
+/* Recipe View */
 Route::get('/recipe', function () {
     return view('recipe');
 });
-/* Grocery List View */
+/* Food Report View */
 Route::get('/foodList', function () {
     return view('foodList');
 });
@@ -35,13 +39,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'ItemsController@store');
 
-Route::get('/items/create', 'ItemsController@create');
-Route::get('/items/search', 'ItemsController@search');
-Route::post('/items/sort', 'ItemsController@sort');
-Route::delete('items/{item}', 'ItemsController@destroy');
+// Route::get('/items/create', 'ItemsController@create');
+// Route::get('/items/search', 'ItemsController@search');
+// Route::post('/items/sort', 'ItemsController@sort');
+// Route::delete('items/{item}', 'ItemsController@destroy');
 
 Route::get('/ocr', function (){
     return view('ocr');
 });
 
 Route::resource('fridges','FridgesController');
+Route::resource('items','ItemsController');
