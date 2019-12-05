@@ -46,13 +46,11 @@
                         <div class="field">
                             <label class="label">Expiration Date</label>
                             <div class="control has-icons-left has-icons-right" >
-                                <input class="input" type="date" name="expiration" required autocomplete="Date">
+                                <input class="input" type="date" name="expiration_date" required autocomplete="Date">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-calendar"></i>
                                 </span>
-                            
                             </div>
-                            
                         </div>
 
                         <div class="field is-grouped">
