@@ -50,7 +50,7 @@
         @yield('content')
         <div class="container">
             <article class="message is-info">
-                <div class="message-header has-text-centered">
+                <div class="message-header has-text-centered" style="color:black;">
                     <p>SFSU Software Engineering Project CSC 648-848, Fall 2019. For Demonstration Only.</p>
                 </div>
             </article>

@@ -28,7 +28,7 @@
                     <p>Back-End Lead - James Day</p>
                     <p>Front-End Developer - Raymond Gee</p>
                     <p>Front-End Lead - Aung Hein</p>
-                    <p>Developer - Jian Xin Qi</p>
+                    <p>Front-End Developer - Jian Xin Qi</p>
                     <p>Back-End Developer - Tommy Nguyen</p>
                 </div>
             </div>
