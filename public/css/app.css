@@ -12462,6 +12462,11 @@ label.panel-block:hover {
   border-radius: 5px;
 }
 
+.button.is-active,
+.button:active {
+  box-shadow: inset 9px 1px 4px rgba(34, 34, 34, 0.3);
+}
+
 .button.is-white {
   border-color: #f2f2f2;
 }

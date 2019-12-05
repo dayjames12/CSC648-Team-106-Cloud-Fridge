@@ -33,9 +33,9 @@ class CreateFridgesTable extends Migration
         Schema::dropIfExists('fridges');
     }
 
-    public function user(){
-        return $this->belongsToMany('user');
-    }
+    // public function user(){
+    //     return $this->belongsToMany('user');
+    // }
 }
 //user has one ridge
 //fridge has many users

@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users');
     }
 
-    public function fridge(){
-        return $this->hasOne('fridge');
-    }
+    // public function fridge(){
+    //     return $this->hasOne('fridge');
+    // }
 }
