@@ -36,7 +36,8 @@ class FridgesController extends Controller
     }
 
     public function update(Fridge $fridge){
-        $fridge->update(request(['name','creator']));
+        $fridge->update(request(['name','creator','user_id']));
+
         $fridge->save();
 
         return redirect('/fridges');

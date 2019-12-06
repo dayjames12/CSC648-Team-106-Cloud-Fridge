@@ -20,6 +20,7 @@ class CreateItemsTable extends Migration
             $table->integer('quantity');
             $table->double('price');
             $table->date('expiration_date');
+            $table->string('item_list');
             $table->timestamps(); //can use timestamp for current date?
         });
     }
