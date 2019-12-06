@@ -15,8 +15,8 @@ class CreateFridgesTable extends Migration
     {
         Schema::create('fridges', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('user_id')->nullable();
             $table->string('name');
-            $table->json('items')->nullable();//json going to be serialized?
             $table->string('creator');//owner of fridge
             $table->string('allowed')->nullable();//users of fridge
             $table->timestamps();
@@ -33,9 +33,9 @@ class CreateFridgesTable extends Migration
         Schema::dropIfExists('fridges');
     }
 
-    public function user(){
-        return $this->belongsToMany('user');
-    }
+    // public function user(){
+    //     return $this->belongsToMany('user');
+    // }
 }
 //user has one ridge
 //fridge has many users
