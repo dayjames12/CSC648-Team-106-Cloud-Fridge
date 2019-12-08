@@ -30,17 +30,23 @@
                 </div>
                 <div class="navbar-menu">
                     <div class="navbar-start">
+                        @auth
                         <a class="navbar-item" href="/home">Home</a>
                         <a class="navbar-item" href="/fridges">Fridges</a>
+                        @endauth
                     </div>
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
+                                @guest
                                 <a class="button is-white is-outlined" href="/register"><strong>Sign up</strong></a>
                                 <a class="button is-white is-outlined" href="/login"><strong>Login</strong></a>
-                                <form action="/logout" method="POST">
-                                    <button class="button" type="submit">Logout</button>
+                                @else
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="button is-white is-outlined" type="submit">Logout</button>
                                 </form>
+                                @endguest
                             </div>
                         </div>
                     </div>
