@@ -7,18 +7,26 @@ use App\Item;
 
 class ItemsController extends Controller
 {
-    public function create()
-    {
+    public function index(){
+        $items = Item::all();
+
+        return view('items.index', compact('items'));
+    }
+
+    public function create(){
         return view('items/create');
     }
 
-    public function store(Request $request)
-    {
+    public function show(Item $item){
+        return view('items.show', compact('item'));
+    }
+
+    public function store(Request $request){
         $item = new Item;
 
         $item->name = $request->name;
         $item->quantity = $request->quantity;
-        $item->expiration = $request->expiration;
+        $item->expiration_date = $request->expiration_date;
         $item->item_list = $request->item_list;
 
         $item->save();
@@ -36,23 +44,47 @@ class ItemsController extends Controller
 
     public function sort(Request $request)
     {
-        $sort = $request->sort_by;
+        if(isset($_POST['sort-by'])) {
 
-        if ($sort == '1') {
-            $items = Item::all()->sortBy('name');
-        }
-        else if ($sort == '2') {
-            $items = Item::all()->sortBy('expiration');
-        }
-        else if ($sort == '3') {
-            $items = Item::all()->sortBy('quantity');
-        }
+            $sort = $_POST['sort-by'];
+
+            if ($sort == '1') {
+                $items = Item::all()->sortBy('name');
+            }
+            else if ($sort == '2') {
+                $items = Item::all();
+            }
+            else if ($sort == '3') {
+                $items = Item::all();
+            }
+        $sort = $request->sort_by;
+        }// not sure if close bracket goes before or after previous line
+
+        // if ($sort == '1') {
+        //     $items = Item::all()->sortBy('name');
+        // }
+        // else if ($sort == '2') {
+        //     $items = Item::all()->sortBy('expiration');
+        // }
+        // else if ($sort == '3') {
+        //     $items = Item::all()->sortBy('quantity');
+        // }
 
         return view('home', ['items' => $items]);
     }
 
-    public function destroy($id)
-    {
+    public function edit(Item $item){
+        return view('items.edit', compact('item'));
+    }
+
+    public function update(Item $item){
+        $item->update(request(['name','quantity','expiration_date']));
+        $item->save();
+
+        return redirect('items');
+    }
+
+    public function destroy($id){
         Item::find($id)->delete();
 
         return redirect('/home');
