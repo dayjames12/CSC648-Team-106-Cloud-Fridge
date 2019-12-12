@@ -95,6 +95,22 @@
                        The recipe API is the main feature we are working on.
                     </div>
                 </div>
+                <div class="box">
+                    <h5 class="title is-5">12/6/19</h5>
+                    <div class="content">
+                      Our group met outside class and got lunch to talk about our inevitable future after graduation. We finished 
+                      M4 and concluded tests to be made. Main focus of our application is finishing our priortitized features and
+                      continuing to work together as a team.
+            
+                    </div>
+                </div>
+                <div class="box">
+                    <h5 class="title is-5">12/12/19</h5>
+                    <div class="content">
+                      Our group met in the library prior to class to reflect on M4 and assign tasks to each memebr to finish 
+                      our application. Finishing project, finalizing the UI, and functionality of our website is up to speed.
+                    </div>
+                </div>
                 
             </article>
         </div>
