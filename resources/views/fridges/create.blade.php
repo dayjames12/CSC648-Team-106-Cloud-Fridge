@@ -19,6 +19,11 @@
                 <input type="text" class="input {{ $errors->has('creator') ? 'is-danger' : '' }}"name="creator" placeholder="Fridge Creator" value="{{old('creator')}}">
             </div>
         </div>
+        <?php
+            $user_id = auth()->user()->id;
+        ?>
+        <input type="text" class="input {{ $errors->has('user_id') ? 'is-danger' : '' }} "name="user_id" value="{{old($user_id)}}">
+
         <div>
             <button type="submit">Create Fridge</button>
         </div>
