@@ -101,7 +101,13 @@
 
 
 
-    <div id="modal-grocery" class="modal">
+    <!-- Temporary Area for the modal. 
+    
+    Grocery Modal only works when clicking from the Foodlist page 
+
+
+    -->
+    <div id="modal-grocery" class="modal is-active">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -109,7 +115,94 @@
             <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-            <!-- Content ... -->
+            <aside>
+                <h1>Groceries</h1>
+
+                <label>
+                <input type=checkbox>
+                <span>Salad greens</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Button Mushrooms</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Cherry Tomatoes</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Onion</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Peppers</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Cucumber</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Naan Bread</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Feta Cheese</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Food Colouring</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Wooden toothpicks</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Wooden Skewers</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Pickles</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Pickled Veggies</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Olives</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Croutons</span>
+                </label>
+
+                <label>
+                <input type=checkbox>
+                <span>Nice Soup</span>
+                </label>
+
+            </aside>
+
+
+
+
             </section>
             <footer class="modal-card-foot">
             <button class="button is-success">Save changes</button>
@@ -142,6 +235,11 @@
     </div>
 </section>
 
+
+
+<!-- Togglesis-active to modal when grocery is clicked 
+    Bug: Appears then disappears right after
+-->
 <script>
     $(document).ready(function() {
     $("#grocery").click(function() {
