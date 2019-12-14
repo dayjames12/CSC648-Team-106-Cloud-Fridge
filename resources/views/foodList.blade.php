@@ -68,7 +68,7 @@
                                 <h2 class="title is-2" style="color:rgb(91, 192, 222);"> Today: </h2>
                             </div>
                         </div>
-                        <div class="column is-half is-narrow" style="padding-left: 20%;">
+                        <div class="column is-half is-narrow" style="padding-left: 30%;">
                             <div class="placeHolder">
                                 <figure class="image is-128x128">
                                     {{-- Just a placeholder for now --}}
@@ -100,116 +100,111 @@
     </div>
 
 
-
     <!-- Temporary Area for the modal. 
     
     Grocery Modal only works when clicking from the Foodlist page 
 
-
     -->
-    <div id="modal-grocery" class="modal is-active">
+    <div id="modal-grocery" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-            <p class="modal-card-title">Modal title</p>
+            <p class="modal-card-title">Grocery</p>
             <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-            <aside>
-                <h1>Groceries</h1>
+                <aside>
+                    <h1>Groceries</h1>
 
-                <label>
-                <input type=checkbox>
-                <span>Salad greens</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Salad greens</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Button Mushrooms</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Button Mushrooms</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Cherry Tomatoes</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Cherry Tomatoes</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Onion</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Onion</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Peppers</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Peppers</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Cucumber</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Cucumber</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Naan Bread</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Naan Bread</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Feta Cheese</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Feta Cheese</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Food Colouring</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Food Colouring</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Wooden toothpicks</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Wooden toothpicks</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Wooden Skewers</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Wooden Skewers</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Pickles</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Pickles</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Pickled Veggies</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Pickled Veggies</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Olives</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Olives</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Croutons</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Croutons</span>
+                    </label>
 
-                <label>
-                <input type=checkbox>
-                <span>Nice Soup</span>
-                </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Nice Soup</span>
+                    </label>
 
-            </aside>
-
-
-
-
+                </aside>
             </section>
             <footer class="modal-card-foot">
-            <button class="button is-success">Save changes</button>
-            <button class="button">Cancel</button>
+                <button class="button is-info">Add Items</button>
+                <button class="button is-danger">Clear All</button>
             </footer>
         </div>
     </div>
+
 
 
     {{-- Bottom nav bar attempt 1 --}}
@@ -231,22 +226,8 @@
             </a>
         </div>
     </nav>
-
+ 
     </div>
 </section>
-
-
-
-<!-- Togglesis-active to modal when grocery is clicked 
-    Bug: Appears then disappears right after
--->
-<script>
-    $(document).ready(function() {
-    $("#grocery").click(function() {
-        $(".modal").toggleClass("is-active");
-       
-        });
-    });
-</script>
 
 @endsection

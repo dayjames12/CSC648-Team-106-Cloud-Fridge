@@ -54,7 +54,11 @@
                                     <option value="3">Quantity</option>
                                 </select>
                             </span>
-                            <input type="submit" value="Submit">
+
+                            <button class = "button is-info" type="submit" value="Submit">
+                                Sort
+                                <!-- <input type="submit" value="Submit"> -->
+                            </button>
                         </p>
                     </form>
                 </div>
