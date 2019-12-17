@@ -12,11 +12,11 @@
 
     <div class="block">
         <div class="container">
-            <div class="notification" style="background:#b0e5ff; border-radius:15px;">
+            <div id="foodlist_date" class="notification" style="background:#b0e5ff; border-radius:15px;">
                 <nav class="level">
                     <div class="level-item has-text-centered">
                         <div class="action-buttons">
-                            <a class="button is-link" style="background: transparent; border: none;">
+                            <a id="foodlisi"class="button is-link" style="background: transparent; border: none;">
                                 <i class="fa fa-chevron-left">
                                 </i>
                             </a>
@@ -83,13 +83,7 @@
 
                 </div>
 
-
-                <div class="notification">
-                    Hello
-
-
-                </div>
-
+               
             </div>
 
 

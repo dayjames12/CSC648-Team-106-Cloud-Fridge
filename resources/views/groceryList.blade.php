@@ -87,7 +87,7 @@
                     </span>
                     <p class="is-size-7">Inventory</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/groceryList">
+                <a  id="grocery" class="navbar-item is-expanded is-block has-text-centered" href="">
                     <i class="fa fa-list"></i>
                     <p class="is-size-7">Grocery List</p>
                 </a>
