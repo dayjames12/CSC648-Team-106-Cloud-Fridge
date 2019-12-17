@@ -2,24 +2,26 @@
 
 @section('content')
 <section>
-    <div class="hero is-info is-medium ">
+    <div class="hero is-primary">
         <div class="hero-body">
-            <div class="container has-text-centered">
+            <div class="container">
                 <h1 class="title">Cloud Fridge</h1>
                 <h2 class="subtitle text-wrap">
-
                     The easiest way to manage your fridge. This application aims to make keeping track of what is in
                     your fridge easy.
                     Just upload a picture of your receipt and you are ready to go!
-
                 </h2>
-
             </div>
         </div>
     </div>
     <div class="container">
         <article class="message">
-
+            <div class="message-header">About the App</div>
+            <div class="message-body">
+                <div class="box">
+                    <p>This application aims to make keeping track of what is in your fridge easy. Just upload a picture of your receipt and you are ready to go!</p>
+                </div>
+            </div>
             <div class="message-header">About Us</div>
             <div class="message-body">
                 <div class="box">
@@ -34,7 +36,6 @@
             </div>
             <div class="message-header">Recorded Meeting Summary</div>
             <div class="message-body">
-
                 <div class="box">
                     <h5 class="title is-5">9/16/19</h5>
                     <div class="content">Help entire group in Setting up GitHub and make sure everybody are connected to
@@ -44,7 +45,6 @@
                         up and was able to know which command used for Git and they are able to push into our Github
                         repo.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">9/25/19</h5>
                     <div class="content">Discussion of each member's role of the group and type of coding practices used
@@ -53,7 +53,6 @@
                         interested in and give members who are not as proficient to join a front-end or back-end so the
                         each member can teach each other.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">10/10/19</h5>
                     <div class="content">Had a in-class group team work. Everybody communicated affectively to work on
@@ -61,7 +60,6 @@
                         our app and the risk was that we never thought to place the receipt scanner to our app. We
                         resolved this problem by correcting our project and to add our receipt scanner.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">10/15/19</h5>
                     <div class="content">Met in class to discuss Project. Our group decided to start a different
@@ -72,7 +70,6 @@
                         have Macbook that figure out the solution about Laravel helped those students who are struggling
                         with MacBook.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">10/17/19</h5>
                     <div class="content">We met In-class to discuss about project. All risk in our group still have
@@ -82,7 +79,6 @@
                         resources on our online group chat called Discord so all members can get help when they are
                         away.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">10/22/19</h5>
                     <div class="content">During our In-class and after-Class meeting, we all spent time working on our
@@ -92,7 +88,6 @@
                         what needed to be done for this project. We resolve this issue by our group members who was
                         present reach out to our leader to let him know what was discussed by the professor.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">10/29/19</h5>
                     <div class="content">Met during last part of class. The risk are some members aren't present to work
@@ -101,14 +96,12 @@
                         milestone 3 is due next week and the risk was don't know if everybody who didn't show up got the
                         message on if members got their parts accomplished.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">11/4/19</h5>
                     <div class="content">Tomorrow is the due day for Milestone 3, so our group met at 12pm to finalize
                         Milestone 3. The risk we had was we are not fully finished yet by the time we all met together.
                     </div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">11/5/19</h5>
                     <div class="content">Everybody gathered in class time to fix our project database. The risk was that
@@ -119,7 +112,6 @@
                         to help us. We had a member on our team that was able to get their database of XAMPP and tried
                         his best to help those team members who was struggling.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">11/7/19</h5>
                     <div class="content">Group came to class together on explaining our group progress so far. There are
@@ -131,7 +123,6 @@
                         our professor is important because we hope to use this to continue to improve our project. We
                         hope to fix our project ASAP.</div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">11/12/19</h5>
                     <div class="content">
@@ -155,8 +146,12 @@
                     </div>
                 </div>
                 <div class="box">
-                    <h5 class="title is-5">11/18/19</h5>
+                    <h5 class="title is-5">11/21/19</h5>
                     <div class="content">
+                      Our group came to class and discusssed what features/testing we need to complete for milestone 4.
+                        Set tasks for thanksgiving break and discussed what contributions we all can be making. 
+                       The recipe API is the main feature we are working on.
+
                         Our entire group met up again on the day before class started to ensure all or most members of
                         our group understand the instructions on implementing the project. Our group discuss what should
                         be added and deleted. During our group meeting today and since everybody is together in-person,
@@ -165,7 +160,7 @@
                     </div>
                 </div>
                 <div class="box">
-                    <h5 class="title is-5">11/19/19</h5>
+                    <h5 class="title is-5">12/6/19</h5>
                     <div class="content">
                         There are some of our teams members who decide to come together to work on the project today.
                         Some team members wanted to met in person to work on the project because we felt that by coming
@@ -179,15 +174,12 @@
                     </div>
                 </div>
                 <div class="box">
-                    <h5 class="title is-5">11/21/19</h5>
+                    <h5 class="title is-5">12/12/19</h5>
                     <div class="content">
-                        Our group came to class and discusssed what features/testing we need to complete for milestone
-                        4.
-                        Set tasks for thanksgiving break and discussed what contributions we all can be making.
-                        The recipe API is the main feature we are working on.
+                      Our group met in the library prior to class to reflect on M4 and assign tasks to each memebr to finish 
+                      our application. Finishing project, finalizing the UI, and functionality of our website is up to speed.
                     </div>
                 </div>
-
                 <div class="box">
                     <h5 class="title is-5">12/3/19</h5>
                     <div class="content">
@@ -204,7 +196,7 @@
                         better Software Engineer.
                     </div>
                 </div>
-        </article>
-    </div>
+            </article>
+        </div>
 </section>
 @endsection
