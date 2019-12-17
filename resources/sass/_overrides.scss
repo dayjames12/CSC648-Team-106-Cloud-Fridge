@@ -156,6 +156,10 @@
 
 
 
+
+
+
+
 // CSS for Inventory item options
 // Bug: This messes up all ul and li tags 
 ul.options {
@@ -231,4 +235,19 @@ label {
 }
 label:last-of-type {
   margin-bottom: 0;
+}
+
+
+
+.modal-card {
+  .modal-card-head{
+    background: #5bc0de;
+
+    .modal-card-title{
+      color: white;
+      text-align: center;
+    }
+  }
+  border-radius: 10px;
+
 }

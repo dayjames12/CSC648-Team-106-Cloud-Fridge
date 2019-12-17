@@ -69,17 +69,22 @@
 
 <script>
     $(document).ready(function() {
-    $(".navbar-burger").click(function() {
-        $(".navbar-burger").toggleClass("is-active");
-        $(".navbar-menu").toggleClass("is-active");
-    });
+
+        $(".navbar-burger").click(function() {
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+        });
 
 
+        $("#cancel").click(function(){
+
+            location.href = "/home"
+
+        });
 
 
-
-    // Brings up the grocery List page
-    $(document).ready(function() {
+        // Brings up the grocery List page
+    
         $("#grocery").click(function() {
             $(".modal").toggleClass("is-active");
             event.preventDefault();
@@ -90,9 +95,17 @@
                 modal.classList.remove('is-active');
                 html.classList.remove('is-clipped');
             });
+            modal.querySelector('.delete').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+
+            }
+            
+            )
         });
+  
     });
-});
 </script>
 
 </html>

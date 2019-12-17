@@ -7058,7 +7058,7 @@ a.list-item {
 
 .modal-content,
 .modal-card {
-  margin: 0 20px;
+  margin: 0 50px;
   max-height: calc(100vh - 160px);
   overflow: auto;
   position: relative;
@@ -12896,5 +12896,18 @@ label {
 
 label:last-of-type {
   margin-bottom: 0;
+}
+
+.modal-card {
+  border-radius: 10px;
+}
+
+.modal-card .modal-card-head {
+  background: #5bc0de;
+}
+
+.modal-card .modal-card-head .modal-card-title {
+  color: white;
+  text-align: center;
 }
 

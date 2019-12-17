@@ -57,8 +57,8 @@
                             <div class="control">
                                 <button type = "submit" class="button is-link">Submit</button>
                             </div>
-                            <div class="control">
-                                <button class="button is-link is-light">Cancel</button>
+                            <div id="cancel" class="control">
+                                <button class="button is-link is-light" href="/home">Cancel</button>
                             </div>
                         </div>
 

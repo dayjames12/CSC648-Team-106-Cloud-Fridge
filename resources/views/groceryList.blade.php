@@ -87,7 +87,7 @@
                     </span>
                     <p class="is-size-7">Inventory</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="/groceryList">
+                <a  id="grocery" class="navbar-item is-expanded is-block has-text-centered" href="">
                     <i class="fa fa-list"></i>
                     <p class="is-size-7">Grocery List</p>
                 </a>
@@ -104,7 +104,7 @@
 
 
         -->
-        <div id="modal-grocery" class="modal">
+        <!-- <div id="modal-grocery" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
@@ -113,7 +113,7 @@
                 </header>
                 <section class="modal-card-body">
                 <aside>
-                    <h1>Groceries</h1>
+                   
 
                     <label>
                     <input type=checkbox>
@@ -206,7 +206,7 @@
                 <button class="button">Cancel</button>
                 </footer>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </section>

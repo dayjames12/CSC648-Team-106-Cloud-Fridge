@@ -12,11 +12,11 @@
 
     <div class="block">
         <div class="container">
-            <div class="notification" style="background:#b0e5ff; border-radius:15px;">
+            <div id="foodlist_date" class="notification" style="background:#b0e5ff; border-radius:15px;">
                 <nav class="level">
                     <div class="level-item has-text-centered">
                         <div class="action-buttons">
-                            <a class="button is-link" style="background: transparent; border: none;">
+                            <a id="foodlisi"class="button is-link" style="background: transparent; border: none;">
                                 <i class="fa fa-chevron-left">
                                 </i>
                             </a>
@@ -84,12 +84,13 @@
                 </div>
 
 
+
+                <!-- Database is broken, Fridge ID error -->
+                <!-- @foreach ($items as $item)
                 <div class="notification">
-                    Hello
-
-
+                    {{$item->name}}
                 </div>
-
+                @endforeach -->
             </div>
 
 
@@ -114,7 +115,7 @@
             </header>
             <section class="modal-card-body">
                 <aside>
-                    <h1>Groceries</h1>
+                
 
                     <label>
                     <input type=checkbox>
