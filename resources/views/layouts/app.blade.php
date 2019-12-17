@@ -90,6 +90,14 @@
                 modal.classList.remove('is-active');
                 html.classList.remove('is-clipped');
             });
+            modal.querySelector('.delete').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+
+            }
+            
+            )
         });
     });
 });
