@@ -251,7 +251,7 @@
                     <i class="fa fa-cookie-bite"></i>
                     <p class="is-size-7">Food List</p>
                 </a>
-                <a class="navbar-item is-expanded is-block has-text-centered" href="">
+                <a class="navbar-item is-expanded is-block has-text-centered" href="/receiptUpload">
                     <i class="fas fa-receipt"></i>
                     <p class="is-size-7">Receipt Upload</p>
                 </a>
