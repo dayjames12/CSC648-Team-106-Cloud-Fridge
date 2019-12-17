@@ -116,89 +116,94 @@
                 <button class="delete" aria-label="close"></button>
                 </header>
                 <section class="modal-card-body">
-                    <aside>
-                        <h1>Groceries</h1>
+                <aside>
+                   
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Salad greens</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Salad greens</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Button Mushrooms</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Button Mushrooms</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Cherry Tomatoes</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Cherry Tomatoes</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Onion</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Onion</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Peppers</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Peppers</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Cucumber</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Cucumber</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Naan Bread</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Naan Bread</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Feta Cheese</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Feta Cheese</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Food Colouring</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Food Colouring</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Wooden toothpicks</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Wooden toothpicks</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Wooden Skewers</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Wooden Skewers</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Pickles</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Pickles</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Pickled Veggies</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Pickled Veggies</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Olives</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Olives</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Croutons</span>
-                        </label>
+                    <label>
+                    <input type=checkbox>
+                    <span>Croutons</span>
+                    </label>
 
-                        <label>
-                            <input type=checkbox>
-                            <span>Nice Soup</span>
-                        </label>
-                    </aside>
+                    <label>
+                    <input type=checkbox>
+                    <span>Nice Soup</span>
+                    </label>
+
+                </aside>
+
+
+
+
                 </section>
                 <footer class="modal-card-foot">
                     <button class="button is-success">Save changes</button>
