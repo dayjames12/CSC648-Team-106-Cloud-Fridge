@@ -6,6 +6,8 @@
 {{-- enables usage of bulma icons --}}
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
+<ocr-component class="title"></ocr-component>
+
 <section class="section">
     <div class="container">
 
@@ -14,9 +16,37 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                <p class="modal-card-title">Grocery</p>
-                <button class="delete" aria-label="close"></button>
+                    <p class="modal-card-title">Grocery</p>
+                    <button class="delete" aria-label="close"></button>
                 </header>
+
+                <section class="modal-card-body">
+                    <aside>
+                        <h1>Groceries</h1>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Salad greens</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Button Mushrooms</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Cherry Tomatoes</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Onion</span>
+                        </label>
+
+
+                    </aside>
+                </section>
 
                 <footer class="modal-card-foot">
                     <button class="button is-info">Add Items</button>
