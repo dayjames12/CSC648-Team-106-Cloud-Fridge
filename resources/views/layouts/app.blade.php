@@ -61,6 +61,9 @@
                 </div>
             </article>
         </div>
+
+
+       
     </div>
 </body>
 
@@ -69,6 +72,25 @@
     $(".navbar-burger").click(function() {
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
+    });
+
+
+
+
+
+    // Brings up the grocery List page
+    $(document).ready(function() {
+        $("#grocery").click(function() {
+            $(".modal").toggleClass("is-active");
+            event.preventDefault();
+
+            var modal = document.querySelector('.modal');  
+            modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+            });
+        });
     });
 });
 </script>
