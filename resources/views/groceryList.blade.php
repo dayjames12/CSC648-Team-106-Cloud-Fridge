@@ -108,7 +108,7 @@
 
 
         -->
-        <div id="modal-grocery" class="modal">
+        <!-- <div id="modal-grocery" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
@@ -205,7 +205,7 @@
                     <button class="button">Cancel</button>
                 </footer>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </section>
