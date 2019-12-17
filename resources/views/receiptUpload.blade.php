@@ -9,8 +9,24 @@
 <section class="section">
     <div class="container">
 
+    {{-- Grocery List modal pop-up --}}
+    <div id="modal-grocery" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                <p class="modal-card-title">Grocery</p>
+                <button class="delete" aria-label="close"></button>
+                </header>
 
-        {{-- Bottom nav bar attempt 1 --}}
+                <footer class="modal-card-foot">
+                    <button class="button is-info">Add Items</button>
+                    <button class="button is-danger">Clear All</button>
+                </footer>
+            </div>
+        </div>
+
+
+        {{-- Bottom nav bar --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">
                 <a class="navbar-item is-expanded is-block has-text-centered" href="/home">
