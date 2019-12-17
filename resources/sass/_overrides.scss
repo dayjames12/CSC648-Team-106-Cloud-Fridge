@@ -236,3 +236,18 @@ label {
 label:last-of-type {
   margin-bottom: 0;
 }
+
+
+
+.modal-card {
+  .modal-card-head{
+    background: #5bc0de;
+
+    .modal-card-title{
+      color: white;
+      text-align: center;
+    }
+  }
+  border-radius: 10px;
+
+}
