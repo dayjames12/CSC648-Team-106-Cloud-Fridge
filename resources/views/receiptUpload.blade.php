@@ -44,7 +44,65 @@
                             <span>Onion</span>
                         </label>
 
+                        <label>
+                            <input type=checkbox>
+                            <span>Peppers</span>
+                        </label>
 
+                        <label>
+                            <input type=checkbox>
+                            <span>Cucumber</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Naan Bread</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Feta Cheese</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Food Colouring</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Wooden toothpicks</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Wooden Skewers</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Pickles</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Pickled Veggies</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Olives</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Croutons</span>
+                        </label>
+
+                        <label>
+                            <input type=checkbox>
+                            <span>Nice Soup</span>
+                        </label>
                     </aside>
                 </section>
 
