@@ -37,6 +37,8 @@
             </div>
         </div>
 
+        
+        <ocr-component></ocr-component>
 
         {{-- Sort by --}}
         <div class="block">
