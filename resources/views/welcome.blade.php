@@ -111,6 +111,13 @@
                       our application. Finishing project, finalizing the UI, and functionality of our website is up to speed.
                     </div>
                 </div>
+                <div class="box">
+                    <h5 class="title is-5">12/16/19</h5>
+                    <div class="content">
+                      Our Front end team met in the library outisde of class to finalize our project and work on the Front-End display. Back End is cleaning up DB, and finishing the OCR implementation, recipe API implementation and 
+                      getting our application ready for demo day.
+                    </div>
+                </div>
                 
             </article>
         </div>
