@@ -156,7 +156,8 @@
 
 
 
-
+// CSS for Inventory item options
+// Bug: This messes up all ul and li tags 
 ul.options {
   text-align: left;
   display: inline;
@@ -214,4 +215,20 @@ ul li:hover ul {
   display: inline;
   opacity: 1;
   visibility: visible;
+}
+
+
+
+
+// Grocery List CSS
+label {
+  display: block;
+  padding: 1em;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  padding-left: 2em;
+}
+label:last-of-type {
+  margin-bottom: 0;
 }

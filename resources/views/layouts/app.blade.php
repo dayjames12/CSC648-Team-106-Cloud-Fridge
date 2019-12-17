@@ -30,17 +30,23 @@
                 </div>
                 <div class="navbar-menu">
                     <div class="navbar-start">
+                        @auth
                         <a class="navbar-item" href="/home">Home</a>
                         <a class="navbar-item" href="/fridges">Fridges</a>
+                        @endauth
                     </div>
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
+                                @guest
                                 <a class="button is-white is-outlined" href="/register"><strong>Sign up</strong></a>
                                 <a class="button is-white is-outlined" href="/login"><strong>Login</strong></a>
-                                <form action="/logout" method="POST">
-                                    <button class="button" type="submit">Logout</button>
+                                @else
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="button is-white is-outlined" type="submit">Logout</button>
                                 </form>
+                                @endguest
                             </div>
                         </div>
                     </div>
@@ -55,6 +61,9 @@
                 </div>
             </article>
         </div>
+
+
+       
     </div>
 </body>
 
@@ -63,6 +72,25 @@
     $(".navbar-burger").click(function() {
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
+    });
+
+
+
+
+
+    // Brings up the grocery List page
+    $(document).ready(function() {
+        $("#grocery").click(function() {
+            $(".modal").toggleClass("is-active");
+            event.preventDefault();
+
+            var modal = document.querySelector('.modal');  
+            modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+            });
+        });
     });
 });
 </script>
