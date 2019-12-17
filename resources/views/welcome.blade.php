@@ -181,21 +181,16 @@
                     </div>
                 </div>
                 <div class="box">
-                    <h5 class="title is-5">12/3/19</h5>
+                    <h5 class="title is-5">12/12/19</h5>
                     <div class="content">
-
-                        After the thanksgiving break, our group recap everything else that needed to be done in order to
-                        submit our
-                        project in the next week or so. Our Fridge application is almost close of completion and we
-                        needed to review a
-                        couple more items to be fully finished. Some of our team members met up during class and after
-                        class to try our
-                        best to finish as much as we can. Overall, everybody in our team are very happy that we get to
-                        know each other
-                        throughout the semester and we get the chance to understand more of what it met to become a
-                        better Software Engineer.
+                      Our group met in the library outside of class. The front-end worked on finalizing the GUI display and making 
+                      our application the most user-friendly, and presentable as we could. The back-end is finishing up implementing
+                      the OCR, and final features such as recipe API's to complete prior to demo day. As we all work together the semester is coming
+                      to a close and we are working hard to get our app up to speed for the presentation. Our back-end and front-end 
+                      continue to communicate and run ideas off eachother to fnish the app. 
                     </div>
                 </div>
+         
             </article>
         </div>
 </section>
