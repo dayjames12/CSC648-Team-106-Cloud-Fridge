@@ -12898,3 +12898,16 @@ label:last-of-type {
   margin-bottom: 0;
 }
 
+.modal-card {
+  border-radius: 10px;
+}
+
+.modal-card .modal-card-head {
+  background: #5bc0de;
+}
+
+.modal-card .modal-card-head .modal-card-title {
+  color: white;
+  text-align: center;
+}
+

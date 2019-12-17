@@ -74,8 +74,8 @@
                                 (Carbon\Carbon::now()->diffInDays(Carbon\Carbon::parse($item->expiration)->format('Y-m-d')))
                                 @endphp
 
-                            @if ($expdate < 3) <article class="title is-child notification is-danger"
-                                style="border-radius:15px;">
+                                @if ($expdate < 3) 
+                                <article class="title is-child notification is-danger"style="border-radius:15px;">
                                 @elseif ($expdate > 3 && $expdate < 7) <article
                                     class="title is-child notification is-warning" style="border-radius:15px;">
                                     @else
@@ -143,7 +143,7 @@
                 </header>
                 <section class="modal-card-body">
                     <aside>
-                        <h1>Groceries</h1>
+                        
 
                         <label>
                         <input type=checkbox>

@@ -77,6 +77,14 @@
 
                 </div>
 
+
+
+                <!-- Database is broken, Fridge ID error -->
+                <!-- @foreach ($items as $item)
+                <div class="notification">
+                    {{$item->name}}
+                </div>
+                @endforeach -->
             </div>
 
         </div>
@@ -98,7 +106,7 @@
             </header>
             <section class="modal-card-body">
                 <aside>
-                    <h1>Groceries</h1>
+                
 
                     <label>
                         <input type=checkbox>
