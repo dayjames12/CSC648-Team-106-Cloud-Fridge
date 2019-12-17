@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
+    protected $guarded = [];
     /*
      * Scope a query to only include fridge items
      *
