@@ -95,6 +95,10 @@
                     <i class="fa fa-cookie-bite"></i>
                     <p class="is-size-7">Food List</p>
                 </a>
+                <a class="navbar-item is-expanded is-block has-text-centered" href="/receiptUpload">
+                    <i class="fas fa-receipt"></i>
+                    <p class="is-size-7">Receipt Upload</p>
+                </a>
             </div>
         </nav>
 
@@ -202,8 +206,8 @@
 
                 </section>
                 <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
+                    <button class="button is-success">Save changes</button>
+                    <button class="button">Cancel</button>
                 </footer>
             </div>
         </div> -->

@@ -34,6 +34,11 @@ Route::get('/foodList', function () {
     return view('foodList');
 });
 
+/* Receipt Upload View */
+Route::get('/receiptUpload', function () {
+    return view('receiptUpload');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -47,6 +52,7 @@ Route::post('/home', 'ItemsController@store');
 Route::get('/ocr', function (){
     return view('ocr');
 });
+
 
 Route::resource('fridges','FridgesController');
 Route::resource('items','ItemsController');
