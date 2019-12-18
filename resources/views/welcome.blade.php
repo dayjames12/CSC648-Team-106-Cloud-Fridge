@@ -190,6 +190,13 @@
                       continue to communicate and run ideas off eachother to fnish the app. 
                     </div>
                 </div>
+
+                <div class="box">
+                    <h5 class="title is-5">12/18/19</h5>
+                    <div class="content">
+                    Group coming together to finalizing the Project before submission.
+                    </div>
+                </div>
          
             </article>
         </div>

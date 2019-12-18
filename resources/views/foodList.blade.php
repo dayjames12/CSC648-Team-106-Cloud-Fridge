@@ -43,25 +43,7 @@
 
             <div class="container has-text-centered" style="padding-top: 30px;">
                 <div class="container" style="border-radius: 25px; padding-bottom: 5%;">
-                    <!-- <div class ="tile is-ancestor">
-                        <div class="tile is-parent">
-                            <div class= "tile is-child box">
-                                <p>Tile 1</p>
-                            </div>
 
-                            
-                            
-                        </div>
-                        <div class="tile is-parent">
-                            <div class= "tile is-child box">
-                                <div class="">
-                                    <p>Tile 2</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    
-                    </div> -->
                     <div class="columns is-centered is-vcentered">
                         <div class="column is-half">
                             <div>
@@ -76,10 +58,8 @@
                                 </figure>
                             </div>
                         </div>
-
-
+                        
                     </div>
-
 
                 </div>
 
