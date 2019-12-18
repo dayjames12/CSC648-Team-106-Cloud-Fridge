@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Item;
+use App\Fridge;
 
 class ItemsController extends Controller
 {
@@ -24,6 +25,7 @@ class ItemsController extends Controller
     public function store(Request $request){
         $item = new Item;
 
+        $item->fridge_id = Fridge::first()->fridge_id;
         $item->name = $request->name;
         $item->quantity = $request->quantity;
         $item->expiration_date = $request->expiration_date;
