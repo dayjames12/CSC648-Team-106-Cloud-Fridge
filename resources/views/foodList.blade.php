@@ -45,7 +45,6 @@
                             <div class= "tile is-child box">
                                 <p>Tile 1</p>
                             </div>
-
                             
                             
                         </div>
@@ -56,7 +55,6 @@
                                 </div>
                             </div>
                         </div>
-
                     
                     </div> -->
                     <div class="columns is-centered is-vcentered">
@@ -100,7 +98,6 @@
     <!-- Temporary Area for the modal. 
     
     Grocery Modal only works when clicking from the Foodlist page 
-
     -->
     <div id="modal-grocery" class="modal">
         <div class="modal-background"></div>
@@ -194,8 +191,9 @@
                     </label>
                 </aside>
             </section>
+            
             <footer class="modal-card-foot">
-                <button class="button is-info">Add Items</button>
+                <button class="button is-info">Add Item</button>
                 <button class="button is-danger">Clear All</button>
             </footer>
         </div>
