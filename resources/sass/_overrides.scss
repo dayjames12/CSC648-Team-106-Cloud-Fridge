@@ -234,6 +234,11 @@ ul li:hover ul {
 
 }
 
+// Login Label color
+#login{
+  color: black;
+
+}
 
 // Grocery List CSS
 label {
@@ -305,6 +310,8 @@ label:last-of-type {
       text-align: center;
     }
   }
+  padding-left: 5%;
+  padding-right: 5%;
   border-radius: 10px;
 
 }
