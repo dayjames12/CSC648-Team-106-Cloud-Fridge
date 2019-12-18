@@ -28,14 +28,7 @@
             </div>
         </div>
 
-        {{-- Add item --}}
-        <div class="block">
-            <div class="field has-addons">
-                <p class="control">
-                    <a href="/items/create?origin=/home" class="button is-info">Add Item</a>
-                </p>
-            </div>
-        </div>
+        
 
 
         {{-- Sort by --}}
@@ -133,7 +126,7 @@
             </div>
         </div>
 
-
+       
 
         <div id="modal-grocery" class="modal">
             <div class="modal-background"></div>
@@ -235,6 +228,14 @@
             </div>
         </div>
 
+
+        {{-- Add item --}}
+        <div class="blockContainer">
+            <div class="container">
+                <a id = "itemAdd" href="/items/create?origin=/home" class="button is-info">+</a>
+            </div>
+        </div>
+
         {{-- Bottom nav bar attempt 1 --}}
         <nav class="navbar is-link is-fixed-bottom" role="navigation">
             <div class="navbar-brand">
@@ -256,4 +257,7 @@
         </nav>
     </div>
 </section>
+
+
+
 @endsection

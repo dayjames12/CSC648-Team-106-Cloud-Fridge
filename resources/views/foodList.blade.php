@@ -12,11 +12,11 @@
 
     <div class="block">
         <div class="container">
-            <div id="foodlist_date" class="notification" style="background:#b0e5ff; border-radius:15px;">
+            <div id="foodlist_date" class="notification" >
                 <nav class="level">
                     <div class="level-item has-text-centered">
                         <div class="action-buttons">
-                            <a id="foodlisi"class="button is-link" style="background: transparent; border: none;">
+                            <a id="foodlistButton" class="button is-link" >
                                 <i class="fa fa-chevron-left">
                                 </i>
                             </a>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="level-item has-text-centered">
                         <div class="action-buttons">
-                            <a class="button is-link" style="background: transparent; border: none;">
+                            <a id="foodlistButton" class="button is-link">
                                 <i class="fa fa-chevron-right">
                                 </i>
                             </a>
@@ -81,23 +81,21 @@
                     </div>
 
 
+
+                    <div class="notification">
+                        <div class="level is-mobile">
+                            <div class="level-left ">
+                                <p>Apple</p>
+                            </div>
+                            <div class="level-right">
+                                <p>1</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-
-
-                <!-- Database is broken, Fridge ID error -->
-                <!-- @foreach ($items as $item)
-                <div class="notification">
-                    {{$item->name}}
-                </div>
-                @endforeach -->
             </div>
-
-
         </div>
-
-
-
     </div>
 
 
