@@ -193,7 +193,7 @@
             </section>
             
             <footer class="modal-card-foot">
-                <button class="button is-info">Add Item</button>
+            <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
                 <button class="button is-danger">Clear All</button>
             </footer>
         </div>
