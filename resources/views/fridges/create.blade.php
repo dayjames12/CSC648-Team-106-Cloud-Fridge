@@ -20,9 +20,9 @@
             </div>
         </div>
         <?php
-            $user_id = auth()->user()->id;
+            $fridge_id = auth()->user()->id;
         ?>
-        <input type="text" class="input {{ $errors->has('user_id') ? 'is-danger' : '' }} "name="user_id" value="{{old($user_id)}}">
+        <input type="hidden" name="fridge_id" value="<?php echo $fridge_id ?>">
 
         <div>
             <button type="submit">Create Fridge</button>
