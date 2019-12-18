@@ -12900,6 +12900,10 @@ ul li:hover ul {
   color: white;
 }
 
+#login {
+  color: black;
+}
+
 label {
   display: block;
   padding: 1em;
@@ -12939,6 +12943,8 @@ label:last-of-type {
 }
 
 .modal-card {
+  padding-left: 5%;
+  padding-right: 5%;
   border-radius: 10px;
 }
 
