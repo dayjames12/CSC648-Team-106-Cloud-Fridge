@@ -54,13 +54,13 @@
             </div>
         </nav>
         @yield('content')
-        <div class="container">
+        {{-- <div class="container">
             <article class="message is-info">
                 <div class="message-header has-text-centered">
                     <p>SFSU Software Engineering Project CSC 648-848, Fall 2019. For Demonstration Only.</p>
                 </div>
             </article>
-        </div>
+        </div> --}}
 
 
        
