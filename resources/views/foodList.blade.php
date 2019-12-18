@@ -6,10 +6,7 @@
 {{-- enables usage of bulma icons --}}
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-
 <section class="section">
-
-
     <div class="block">
         <div class="container">
             <div id="foodlist_date" class="notification" style="background:#b0e5ff; border-radius:15px;">
@@ -43,7 +40,23 @@
 
             <div class="container has-text-centered" style="padding-top: 30px;">
                 <div class="container" style="border-radius: 25px; padding-bottom: 5%;">
-
+                    <!-- <div class ="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <div class= "tile is-child box">
+                                <p>Tile 1</p>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="tile is-parent">
+                            <div class= "tile is-child box">
+                                <div class="">
+                                    <p>Tile 2</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div> -->
                     <div class="columns is-centered is-vcentered">
                         <div class="column is-half">
                             <div>
@@ -58,7 +71,6 @@
                                 </figure>
                             </div>
                         </div>
-                        
                     </div>
 
                 </div>
@@ -73,10 +85,7 @@
                 @endforeach -->
             </div>
 
-
         </div>
-
-
 
     </div>
 
@@ -84,99 +93,97 @@
     <!-- Temporary Area for the modal. 
     
     Grocery Modal only works when clicking from the Foodlist page 
-
     -->
     <div id="modal-grocery" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-            <p class="modal-card-title">Grocery</p>
-            <button class="delete" aria-label="close"></button>
+                <p class="modal-card-title">Grocery</p>
+                <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <aside>
                 
 
                     <label>
-                    <input type=checkbox>
-                    <span>Salad greens</span>
+                        <input type=checkbox>
+                        <span>Salad greens</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Button Mushrooms</span>
+                        <input type=checkbox>
+                        <span>Button Mushrooms</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Cherry Tomatoes</span>
+                        <input type=checkbox>
+                        <span>Cherry Tomatoes</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Onion</span>
+                        <input type=checkbox>
+                        <span>Onion</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Peppers</span>
+                        <input type=checkbox>
+                        <span>Peppers</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Cucumber</span>
+                        <input type=checkbox>
+                        <span>Cucumber</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Naan Bread</span>
+                        <input type=checkbox>
+                        <span>Naan Bread</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Feta Cheese</span>
+                        <input type=checkbox>
+                        <span>Feta Cheese</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Food Colouring</span>
+                        <input type=checkbox>
+                        <span>Food Colouring</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Wooden toothpicks</span>
+                        <input type=checkbox>
+                        <span>Wooden toothpicks</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Wooden Skewers</span>
+                        <input type=checkbox>
+                        <span>Wooden Skewers</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Pickles</span>
+                        <input type=checkbox>
+                        <span>Pickles</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Pickled Veggies</span>
+                        <input type=checkbox>
+                        <span>Pickled Veggies</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Olives</span>
+                        <input type=checkbox>
+                        <span>Olives</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Croutons</span>
+                        <input type=checkbox>
+                        <span>Croutons</span>
                     </label>
 
                     <label>
-                    <input type=checkbox>
-                    <span>Nice Soup</span>
+                        <input type=checkbox>
+                        <span>Nice Soup</span>
                     </label>
-
                 </aside>
             </section>
             <footer class="modal-card-foot">
@@ -204,6 +211,10 @@
             <a class="navbar-item is-expanded is-block has-text-centered" href="/foodList">
                 <i class="fa fa-cookie-bite"></i>
                 <p class="is-size-7">Food List</p>
+            </a>
+            <a class="navbar-item is-expanded is-block has-text-centered" href="/receiptUpload">
+                <i class="fas fa-receipt"></i>
+                <p class="is-size-7">Receipt Upload</p>
             </a>
         </div>
     </nav>
