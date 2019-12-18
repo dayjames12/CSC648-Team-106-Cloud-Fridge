@@ -75,10 +75,7 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
-=======
                 </div>
->>>>>>> de72d5b0b9c2e37329cf8068ddc93a761293439e
 
 
                     <div class="notification">
@@ -94,13 +91,9 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-        </div>
-=======
 
         </div>
 
->>>>>>> de72d5b0b9c2e37329cf8068ddc93a761293439e
     </div>
 
 
