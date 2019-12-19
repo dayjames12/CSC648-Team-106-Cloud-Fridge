@@ -86,10 +86,10 @@
         // Brings up the grocery List page
     
         $("#grocery").click(function() {
-            $(".modal").toggleClass("is-active");
+            $("#modal-grocery").toggleClass("is-active");
             event.preventDefault();
 
-            var modal = document.querySelector('.modal');  
+            var modal = document.querySelector('#modal-grocery');  
             modal.querySelector('.modal-background').addEventListener('click', function(e) {
                 e.preventDefault();
                 modal.classList.remove('is-active');
@@ -104,7 +104,46 @@
             
             )
         });
-  
+
+        // Modal for adding items to fridge
+        $("#addFridgeItem").click(function() {
+            $("#modal-addFridgeItem").toggleClass("is-active");
+            event.preventDefault();
+
+            var modal = document.querySelector('#modal-addFridgeItem');  
+            modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+            });
+            modal.querySelector('.delete').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+            }
+            
+            )
+        });
+
+        // Modal for adding items to grocery list
+        $("#addGroceryItem").click(function() {
+            $("#modal-addGroceryItem").toggleClass("is-active");
+            event.preventDefault();
+
+            var modal = document.querySelector('#modal-addGroceryItem');  
+            modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+            });
+            modal.querySelector('.delete').addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('is-active');
+                html.classList.remove('is-clipped');
+            }
+            
+            )
+        });
     });
 </script>
 
