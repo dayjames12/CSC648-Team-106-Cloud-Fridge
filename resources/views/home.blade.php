@@ -241,8 +241,13 @@
         {{-- Add item --}}
         <div class="blockContainer">
 
+<<<<<<< HEAD
+                <a href="/items/create?origin=/home" class="button is-info">(+) Add Items</a>
+                <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Receipt Scanner</a>
+=======
                 <a href="/items/create?origin=/home" id="addFridgeItem" class="button is-info">(+) Add Items</a>
                 <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Photo Receipt</a>
+>>>>>>> upstream/master
 
         </div>
 
