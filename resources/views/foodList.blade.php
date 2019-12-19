@@ -47,7 +47,7 @@
                                 <h2 class="title is-2" style="color:rgb(91, 192, 222);"> Today: </h2>
                             </div>
                         </div>
-                        <div class="column is-half is-narrow" style="padding-left: 30%;">
+                        <div class="column is-half is-narrow">
                             <div class="placeHolder">
                                 <figure class="image is-128x128">
                                     {{-- Just a placeholder for now --}}
@@ -57,16 +57,38 @@
                         </div>
                     </div>
 
-                </div>
+                    </div>
 
-
+                    <!-- Needs to be replaced with a loop to go through list -->
                     <div class="notification">
                         <div class="level is-mobile">
                             <div class="level-left ">
                                 <p>Apple</p>
                             </div>
                             <div class="level-right">
-                                <p>1</p>
+                                <p>95 Calories</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="level is-mobile">
+                            <div class="level-left ">
+                                <p>Orange</p>
+                            </div>
+                            <div class="level-right">
+                                <p>45 Calories</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="level is-mobile">
+                            <div class="level-left ">
+                                <p>Banana</p>
+                            </div>
+                            <div class="level-right">
+                                <p>105 Calories</p>
                             </div>
 
                         </div>
@@ -113,66 +135,7 @@
                         <input type=checkbox>
                         <span>Onion</span>
                     </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Peppers</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Cucumber</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Naan Bread</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Feta Cheese</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Food Colouring</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Wooden toothpicks</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Wooden Skewers</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Pickles</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Pickled Veggies</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Olives</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Croutons</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Nice Soup</span>
-                    </label>
+                    
                 </aside>
             </section>
             
