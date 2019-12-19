@@ -16,10 +16,10 @@
             <input type="text" name="name" placeholder="Name" value="{{ $fridge->name }}">
         </div>
         <div class="field">
-            <label class="label" for="creator">Creator</label>
+            <label class="label" for="owner">owner</label>
         </div>
         <div class="control">
-            <input type="text" name="creator" placeholder="Creator" value="{{ $fridge->creator }}">
+            <input type="text" name="owner" placeholder="owner" value="{{ $fridge->owner }}">
         </div>
         <div class="field" style="margin: .5em">
             <div class="control">

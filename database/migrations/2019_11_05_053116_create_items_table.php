@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->unsignedInteger('fridge_id');
             $table->string('name');
             $table->integer('quantity');
+            $table->integer('price');
             $table->date('expiration_date');
             $table->string('item_list');
             $table->timestamps(); //can use timestamp for current date?

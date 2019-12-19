@@ -6,7 +6,7 @@
     <h1 class="name">{{ $fridge->name }}</h1>
 
     <div class="content">
-        {{ $fridge->creator}}
+        {{ $fridge->owner}}
     </div>
 
     <p>

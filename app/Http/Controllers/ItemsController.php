@@ -25,9 +25,10 @@ class ItemsController extends Controller
     public function store(Request $request){
         $item = new Item;
 
-        $item->fridge_id = Fridge::first()->fridge_id;
+        $item->fridge_id = Fridge::first()->id;
         $item->name = $request->name;
         $item->quantity = $request->quantity;
+        $item->price = $request->price;
         $item->expiration_date = $request->expiration_date;
         $item->item_list = $request->item_list;
 
@@ -80,7 +81,7 @@ class ItemsController extends Controller
     }
 
     public function update(Item $item){
-        $item->update(request(['name','quantity','expiration_date']));
+        $item->update(request(['name','quantity','price','expiration_date']));
         $item->save();
 
         return redirect('items');

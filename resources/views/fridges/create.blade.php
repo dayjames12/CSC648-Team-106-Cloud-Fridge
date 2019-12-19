@@ -24,15 +24,15 @@
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label" for="creator">Fridge Creator</label>
+                        <label class="label" for="owner">Fridge Owner</label>
                         <div class="control">
-                            <input type="text" class="input {{ $errors->has('creator') ? 'is-danger' : '' }}"name="creator" placeholder="Fridge Creator" value="{{old('creator')}}">
+                            <input type="text" class="input {{ $errors->has('owner') ? 'is-danger' : '' }}"name="owner" placeholder="Fridge Owner" value="{{old('owner')}}">
                         </div>
                     </div>
                     <?php
-                        $fridge_id = auth()->user()->id;
+                        $user_id = auth()->user()->id;
                     ?>
-                    <input type="hidden" name="fridge_id" value="<?php echo $fridge_id ?>">
+                    <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
 
                     <div>
                         <button type="submit">Create Fridge</button>

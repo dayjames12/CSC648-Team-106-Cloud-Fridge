@@ -15,9 +15,9 @@ class CreateFridgesTable extends Migration
     {
         Schema::create('fridges', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('fridge_id')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
             $table->string('name');
-            $table->string('creator');//owner of fridge
+            $table->string('owner');//owner of fridge
             $table->string('allowed')->nullable();//users of fridge
             $table->timestamps();
         });

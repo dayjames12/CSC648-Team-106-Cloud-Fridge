@@ -21,7 +21,7 @@
                     <form method="POST" action="/home">
                         @csrf
                         <div class="field">
-                            <label class="label">Item Name</label>
+                            <label class="label">Name</label>
                             <div class="control has-icons-left has-icons-right">
                                 <input class="input" type="text" placeholder="Text" name="name" required autocomplete="Name">
                                 <span class="icon is-small is-left">
@@ -32,11 +32,23 @@
                         </div>
                         
                         <div class="field">
-                            <label class="label">Item Amount</label>
+                            <label class="label">Quantity</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input" type="integer" placeholder="Amount" name="quantity" required autocomplete="Amount">
+                                <input class="input" type="integer" placeholder="Amount" name="quantity" required autocomplete="Quantity">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-hashtag"></i>
+                                </span>
+                            
+                            </div>
+                            
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Price</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="integer" placeholder="Amount" name="price" required autocomplete="Price">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-dollar-sign"></i>
                                 </span>
                             
                             </div>
