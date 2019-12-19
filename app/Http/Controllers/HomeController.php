@@ -24,9 +24,10 @@ class HomeController extends Controller
     public function index()
     {
         $items = \App\Item::fridge()->get();
+        $user_id = auth()->user()->id;
+        // $items = DB::table('items')->where('user_id', $user_id)
+
 
         return view('home', ['items' => $items]);
-
-        $items = \App\Item::fridge()->get();
     }
 }

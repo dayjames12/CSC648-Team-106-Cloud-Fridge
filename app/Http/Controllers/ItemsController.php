@@ -25,7 +25,7 @@ class ItemsController extends Controller
     public function store(Request $request){
         $item = new Item;
 
-        $item->fridge_id = Fridge::first()->id;
+        $item->user_id = auth()->user()->id;
         $item->name = $request->name;
         $item->quantity = $request->quantity;
         $item->price = $request->price;
