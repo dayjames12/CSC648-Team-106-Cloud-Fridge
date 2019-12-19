@@ -80,7 +80,7 @@
 
 
                 <!-- Database is broken, Fridge ID error -->
-                <!-- @foreach ($items as $item)
+                <!-- @foreach ($items ?? '' as $item)
                 <div class="notification">
                     {{$item->name}}
                 </div>
