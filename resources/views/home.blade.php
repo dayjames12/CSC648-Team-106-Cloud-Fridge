@@ -242,7 +242,6 @@
         <div class="blockContainer">
 
                 <a href="/items/create?origin=/home" id="addFridgeItem" class="button is-info">(+) Add Items</a>
-                <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Photo Receipt</a>
 
         </div>
 
