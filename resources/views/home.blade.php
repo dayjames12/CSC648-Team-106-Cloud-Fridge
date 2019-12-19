@@ -229,9 +229,10 @@
 
         {{-- Add item --}}
         <div class="blockContainer">
-            <div class="container">
-                <a id = "itemAdd" href="/items/create?origin=/home" class="button is-info">+</a>
-            </div>
+
+                <a href="/items/create?origin=/home" class="button is-info">(+) Add Items</a>
+                <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Photo Receipt</a>
+
         </div>
 
         {{-- Bottom nav bar attempt 1 --}}
