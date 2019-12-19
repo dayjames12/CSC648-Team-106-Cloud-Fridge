@@ -28,7 +28,7 @@ window.Vue = require('vue');
 
 Vue.component('navbar-component', require('./components/NavbarComponent.vue').default);
 Vue.component('ocr-component', require('./components/OcrComponent.vue').default);
-Vue.component('bottomNav-component', require('./components/BottomNavBarComponent.vue').default);
+Vue.component('bottomNav-component',require('./components/BottomNavBarComponent.vue').default);
 const app = new Vue({
     el: '#app',
 });
