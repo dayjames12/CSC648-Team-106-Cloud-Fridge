@@ -47,18 +47,18 @@ class ItemsController extends Controller
 
     public function sort(Request $request)
     {
-        if(isset($_POST['sort-by'])) {
+        if(isset($_POST['sort_by'])) {
 
-            $sort = $_POST['sort-by'];
+            $sort = $_POST['sort_by'];
 
             if ($sort == '1') {
                 $items = Item::all()->sortBy('name');
             }
             else if ($sort == '2') {
-                $items = Item::all();
+                $items = Item::all()->sortBy('expiration_date');
             }
             else if ($sort == '3') {
-                $items = Item::all();
+                $items = Item::all()->sortBy('quantity');
             }
         $sort = $request->sort_by;
         }// not sure if close bracket goes before or after previous line

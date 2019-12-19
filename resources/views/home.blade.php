@@ -28,8 +28,6 @@
             </div>
         </div>
 
-        
-
         {{-- Sort by --}}
         <div class="block">
             <div class="notification">
@@ -220,9 +218,22 @@
                     </aside>
                 </section>
                 <footer class="modal-card-foot">
-                    <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
+
                     <button class="button is-danger">Clear All</button>
                 </footer>
+
+                <div id="modal-addGroceryItem" class="modal">
+                    <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Add an item</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+
+                            </section>
+                        </div>
+                    </div>
             </div>
         </div>
 
@@ -230,9 +241,101 @@
         {{-- Add item --}}
         <div class="blockContainer">
 
+<<<<<<< HEAD
                 <a href="/items/create?origin=/home" class="button is-info">(+) Add Items</a>
                 <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Receipt Scanner</a>
+=======
+                <a href="/items/create?origin=/home" id="addFridgeItem" class="button is-info">(+) Add Items</a>
+                <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Photo Receipt</a>
+>>>>>>> upstream/master
 
+        </div>
+
+        {{-- Add item popup --}}
+        <div id="modal-addFridgeItem" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Add an item</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="container">
+
+                        <div class="block">
+                            <div class="notification">
+
+
+
+                                <div class="container ">
+
+                                    <form method="POST" action="/home">
+                                    @csrf
+                                        <div class="field">
+                                            <label class="label">Item Name</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input class="input" type="text" placeholder="Text" name="name" required autocomplete="Name">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-utensils"></i>
+                                                </span>
+                                            </div>
+                            
+                                        </div>
+                        
+                                        <div class="field">
+                                            <label class="label">Item Amount</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input class="input" type="integer" placeholder="Amount" name="quantity" required autocomplete="Amount">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-hashtag"></i>
+                                                </span>
+                            
+                                            </div>
+                            
+                                        </div>
+                        
+                                        <div class="field">
+                                            <label class="label">Price</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input class="input" type="integer" placeholder="Price" name="price" required autocomplete="Price">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-dollar-sign"></i>
+                                                </span>
+                            
+                                            </div>
+                            
+                                        </div>
+
+                                        <div class="field">
+                                            <label class="label">Expiration Date</label>
+                                            <div class="control has-icons-left has-icons-right" >
+                                                <input class="input" type="date" name="expiration_date" required autocomplete="Date">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-calendar"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="field is-grouped">
+                                            <div class="control">
+                                                <button type="submit" class="button is-link">Submit</button>
+                                            </div>
+                                            <div class="control">
+                                                <button id="cancel" type="button" class="button is-link is-light">Cancel</button>
+                                            </div>
+                                        </div>
+                        
+                                        <input type="hidden" name="origin" value="/home">  {{-- Original directory that made GET request --}}
+                                        <input type="hidden" name="item_list" value="Fridge">    {{-- List which item belongs to --}}
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
 
         {{-- Bottom nav bar attempt 1 --}}
