@@ -28,14 +28,7 @@
             </div>
         </div>
 
-        {{-- Add item --}}
-        <div class="block">
-            <div class="field has-addons">
-                <p class="control">
-                    <a href="/items/create?origin=/home" class="button is-info">Add Item</a>
-                </p>
-            </div>
-        </div>
+        
 
         {{-- Sort by --}}
         <div class="block">
@@ -132,7 +125,7 @@
             </div>
         </div>
 
-
+       
 
         <div id="modal-grocery" class="modal">
             <div class="modal-background"></div>
@@ -143,7 +136,6 @@
                 </header>
                 <section class="modal-card-body">
                     <aside>
-                        
 
                         <label>
                         <input type=checkbox>
@@ -228,10 +220,19 @@
                     </aside>
                 </section>
                 <footer class="modal-card-foot">
-                    <button class="button is-info">Add Items</button>
+                    <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
                     <button class="button is-danger">Clear All</button>
                 </footer>
             </div>
+        </div>
+
+
+        {{-- Add item --}}
+        <div class="blockContainer">
+
+                <a href="/items/create?origin=/home" class="button is-info">(+) Add Items</a>
+                <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Photo Receipt</a>
+
         </div>
 
         {{-- Bottom nav bar attempt 1 --}}
@@ -259,4 +260,7 @@
         </nav>
     </div>
 </section>
+
+
+
 @endsection

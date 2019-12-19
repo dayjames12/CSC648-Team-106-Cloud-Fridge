@@ -9,11 +9,11 @@
 <section class="section">
     <div class="block">
         <div class="container">
-            <div id="foodlist_date" class="notification" style="background:#b0e5ff; border-radius:15px;">
+            <div id="foodlist_date" class="notification" >
                 <nav class="level">
                     <div class="level-item has-text-centered">
                         <div class="action-buttons">
-                            <a id="foodlisi"class="button is-link" style="background: transparent; border: none;">
+                            <a id="foodlistButton" class="button is-link" >
                                 <i class="fa fa-chevron-left">
                                 </i>
                             </a>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="level-item has-text-centered">
                         <div class="action-buttons">
-                            <a class="button is-link" style="background: transparent; border: none;">
+                            <a id="foodlistButton" class="button is-link">
                                 <i class="fa fa-chevron-right">
                                 </i>
                             </a>
@@ -40,32 +40,14 @@
 
             <div class="container has-text-centered" style="padding-top: 30px;">
                 <div class="container" style="border-radius: 25px; padding-bottom: 5%;">
-                    <!-- <div class ="tile is-ancestor">
-                        <div class="tile is-parent">
-                            <div class= "tile is-child box">
-                                <p>Tile 1</p>
-                            </div>
 
-                            
-                            
-                        </div>
-                        <div class="tile is-parent">
-                            <div class= "tile is-child box">
-                                <div class="">
-                                    <p>Tile 2</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    
-                    </div> -->
                     <div class="columns is-centered is-vcentered">
                         <div class="column is-half">
                             <div>
                                 <h2 class="title is-2" style="color:rgb(91, 192, 222);"> Today: </h2>
                             </div>
                         </div>
-                        <div class="column is-half is-narrow" style="padding-left: 30%;">
+                        <div class="column is-half is-narrow">
                             <div class="placeHolder">
                                 <figure class="image is-128x128">
                                     {{-- Just a placeholder for now --}}
@@ -75,16 +57,43 @@
                         </div>
                     </div>
 
+                    </div>
+
+                    <!-- Needs to be replaced with a loop to go through list -->
+                    <div class="notification">
+                        <div class="level is-mobile">
+                            <div class="level-left ">
+                                <p>Apple</p>
+                            </div>
+                            <div class="level-right">
+                                <p>95 Calories</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="level is-mobile">
+                            <div class="level-left ">
+                                <p>Orange</p>
+                            </div>
+                            <div class="level-right">
+                                <p>45 Calories</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="level is-mobile">
+                            <div class="level-left ">
+                                <p>Banana</p>
+                            </div>
+                            <div class="level-right">
+                                <p>105 Calories</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-
-
-                <!-- Database is broken, Fridge ID error -->
-                <!-- @foreach ($items as $item)
-                <div class="notification">
-                    {{$item->name}}
-                </div>
-                @endforeach -->
             </div>
 
         </div>
@@ -95,7 +104,6 @@
     <!-- Temporary Area for the modal. 
     
     Grocery Modal only works when clicking from the Foodlist page 
-
     -->
     <div id="modal-grocery" class="modal">
         <div class="modal-background"></div>
@@ -127,70 +135,12 @@
                         <input type=checkbox>
                         <span>Onion</span>
                     </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Peppers</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Cucumber</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Naan Bread</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Feta Cheese</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Food Colouring</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Wooden toothpicks</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Wooden Skewers</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Pickles</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Pickled Veggies</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Olives</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Croutons</span>
-                    </label>
-
-                    <label>
-                        <input type=checkbox>
-                        <span>Nice Soup</span>
-                    </label>
+                    
                 </aside>
             </section>
+            
             <footer class="modal-card-foot">
-                <button class="button is-info">Add Items</button>
+            <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
                 <button class="button is-danger">Clear All</button>
             </footer>
         </div>

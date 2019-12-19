@@ -39,6 +39,109 @@
         </div>
     </form>
 
+
+
+    <!-- Grocery Modal -->
+    <div id="modal-grocery" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Grocery</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <aside>
+                
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Salad greens</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Button Mushrooms</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Cherry Tomatoes</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Onion</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Peppers</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Cucumber</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Naan Bread</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Feta Cheese</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Food Colouring</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Wooden toothpicks</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Wooden Skewers</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Pickles</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Pickled Veggies</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Olives</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Croutons</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Nice Soup</span>
+                    </label>
+                </aside>
+            </section>
+            
+            <footer class="modal-card-foot">
+            <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
+                <button class="button is-danger">Clear All</button>
+            </footer>
+        </div>
+    </div>
+
     {{-- Bottom nav bar --}}
     <nav class="navbar is-link is-fixed-bottom" role="navigation">
         <div class="navbar-brand">

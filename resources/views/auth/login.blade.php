@@ -5,11 +5,11 @@
     <div class="container">
         <article class="message">
             <div class="message-header">{{ __('Login') }}</div>
-            <div class="message-body">
+            <div  class="message-body">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="field">
-                        <label class="label">{{ __('E-Mail Address') }}</label>
+                        <label id= "login" class="label">{{ __('E-Mail Address') }}</label>
                         <div class="control">
                             <input class="input @error('email') is-danger @enderror" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                         </div>
@@ -18,7 +18,7 @@
                         @enderror
                     </div>
                     <div class="field">
-                        <label class="label">{{ __('Password') }}</label>
+                        <label id= "login" class="label">{{ __('Password') }}</label>
                         <div class="control">
                             <input class="input @error('password') is-danger @enderror" type="password" value="{{ old('password') }}" name="password" required autocomplete="current-password" autofocus>
                         </div>
