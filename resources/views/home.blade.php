@@ -290,6 +290,18 @@
                                         </div>
                         
                                         <div class="field">
+                                            <label class="label">Price</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input class="input" type="integer" placeholder="Price" name="price" required autocomplete="Price">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-dollar-sign"></i>
+                                                </span>
+                            
+                                            </div>
+                            
+                                        </div>
+
+                                        <div class="field">
                                             <label class="label">Expiration Date</label>
                                             <div class="control has-icons-left has-icons-right" >
                                                 <input class="input" type="date" name="expiration_date" required autocomplete="Date">
