@@ -23,8 +23,8 @@ class FridgesController extends Controller
     public function store(){
         $attributes = request()->validate([
             'name' => ['required','min:3'],
-            'creator' => ['required','min:3'],
-            'fridge_id' => ['required', 'min:1']
+            'owner' => ['required','min:3'],
+            'user_id' => ['required', 'min:1']
         ]);
 
         Fridge::create($attributes);
@@ -37,7 +37,7 @@ class FridgesController extends Controller
     }
 
     public function update(Fridge $fridge){
-        $fridge->update(request(['name','creator','user_id']));
+        $fridge->update(request(['name','owner','user_id']));
 
         $fridge->save();
 

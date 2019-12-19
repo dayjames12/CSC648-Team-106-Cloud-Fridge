@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fridge extends Model
 {
     // protected $fillable = [ //fillable means only these... also can use gaurded for the inverse
-    //     'title','creator'
+    //     'title','owner'
     // ];
     protected $guarded = [];
 

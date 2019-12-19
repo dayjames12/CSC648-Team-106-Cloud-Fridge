@@ -116,6 +116,7 @@
 
                                         <p class="title is-4"> {{ $item->name }} </p>
                                         <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
+                                        <p class="subtitle is-5"> Price: {{ $item->price }} </p>
                                         <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>
                                     </article>
                             @endforeach
@@ -125,7 +126,6 @@
             </div>
         </div>
 
-       
 
         <div id="modal-grocery" class="modal">
             <div class="modal-background"></div>
