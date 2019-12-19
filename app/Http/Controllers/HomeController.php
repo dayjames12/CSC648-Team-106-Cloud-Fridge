@@ -24,9 +24,8 @@ class HomeController extends Controller
     public function index()
     {
         $items = \App\Item::fridge()->get();
+        $groceryItems = \App\Item::groceryList()->get();
 
-        return view('home', ['items' => $items]);
-
-        $items = \App\Item::fridge()->get();
+        return view('home', compact(['items', 'groceryItems']));
     }
 }
