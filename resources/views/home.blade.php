@@ -114,8 +114,8 @@
 
                                         <p class="title is-4"> {{ $item->name }} </p>
                                         <p class="subtitle is-5"> Quantity: {{ $item->quantity }} </p>
-                                        <p class="subtitle is-5"> Price: {{ $item->price }} </p>
-                                        <p class="subtitle is-5"> Expires: {{ $item->expiration }} </p>
+                                        <p class="subtitle is-5"> Price: ${{ $item->price }} </p>
+                                        <p class="subtitle is-5"> Expires: {{ $item->expiration_date }} </p>
                                     </article>
                             @endforeach
                         </div>
@@ -135,93 +135,21 @@
                 <section class="modal-card-body">
                     <aside>
 
-                        <label>
-                        <input type=checkbox>
-                        <span>Salad greens</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Button Mushrooms</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Cherry Tomatoes</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Onion</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Peppers</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Cucumber</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Naan Bread</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Feta Cheese</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Food Colouring</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Wooden toothpicks</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Wooden Skewers</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Pickles</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Pickled Veggies</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Olives</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Croutons</span>
-                        </label>
-
-                        <label>
-                        <input type=checkbox>
-                        <span>Nice Soup</span>
-                        </label>
+                        @foreach ($groceryItems as $item)
+                            <label>
+                            <input type=checkbox>
+                            <span>{{ $item->name }}</span>
+                            </label>
+                        @endforeach
 
                     </aside>
                 </section>
                 <footer class="modal-card-foot">
-
+                    <button id="addGroceryItem" class="button is-info">(+) Add Items</button>
                     <button class="button is-danger">Clear All</button>
                 </footer>
 
+               {{-- Add item popup --}}
                 <div id="modal-addGroceryItem" class="modal">
                     <div class="modal-background"></div>
                         <div class="modal-card">
@@ -230,7 +158,79 @@
                                 <button class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
+                                <div class="container">
 
+                                    <div class="block">
+                                        <div class="notification">
+
+
+
+                                            <div class="container">
+
+                                                <form method="POST" action="/home">
+                                                @csrf
+                                                    <div class="field">
+                                                        <label class="label">Item Name</label>
+                                                            <div class="control has-icons-left has-icons-right">
+                                                                <input class="input" type="text" placeholder="Text" name="name" required autocomplete="Name">
+                                                                <span class="icon is-small is-left">
+                                                                    <i class="fas fa-utensils"></i>
+                                                                </span>
+                                                            </div>
+                            
+                                                    </div>
+                        
+                                                    <div class="field">
+                                                        <label class="label">Item Amount</label>
+                                                        <div class="control has-icons-left has-icons-right">
+                                                            <input class="input" type="integer" placeholder="Amount" name="quantity" required autocomplete="Amount">
+                                                            <span class="icon is-small is-left">
+                                                                <i class="fas fa-hashtag"></i>
+                                                            </span>
+                            
+                                                        </div>
+                            
+                                                    </div>
+                        
+                                                    <div class="field">
+                                                        <label class="label">Price</label>
+                                                        <div class="control has-icons-left has-icons-right">
+                                                            <input class="input" type="integer" placeholder="Price" name="price" required autocomplete="Price">
+                                                            <span class="icon is-small is-left">
+                                                                <i class="fas fa-dollar-sign"></i>
+                                                            </span>
+                            
+                                                        </div>
+                            
+                                                    </div>
+
+                                                    <div class="field">
+                                                        <label class="label">Expiration Date</label>
+                                                        <div class="control has-icons-left has-icons-right" >
+                                                            <input class="input" type="date" name="expiration_date" required autocomplete="Date">
+                                                            <span class="icon is-small is-left">
+                                                                <i class="fas fa-calendar"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="field is-grouped">
+                                                        <div class="control">
+                                                            <button type="submit" class="button is-link">Submit</button>
+                                                        </div>
+                                                        <div class="control">
+                                                            <button id="cancel" type="button" class="button is-link is-light">Cancel</button>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <input type="hidden" name="item_list" value="Grocery list">    {{-- List which item belongs to --}}
+
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </div>
                     </div>
@@ -241,13 +241,8 @@
         {{-- Add item --}}
         <div class="blockContainer">
 
-<<<<<<< HEAD
-                <a href="/items/create?origin=/home" class="button is-info">(+) Add Items</a>
-                <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Receipt Scanner</a>
-=======
                 <a href="/items/create?origin=/home" id="addFridgeItem" class="button is-info">(+) Add Items</a>
                 <a href="/items/create?origin=/receiptUpload" class="button is-info">(+) Photo Receipt</a>
->>>>>>> upstream/master
 
         </div>
 
@@ -267,7 +262,7 @@
 
 
 
-                                <div class="container ">
+                                <div class="container">
 
                                     <form method="POST" action="/home">
                                     @csrf
@@ -325,7 +320,6 @@
                                             </div>
                                         </div>
                         
-                                        <input type="hidden" name="origin" value="/home">  {{-- Original directory that made GET request --}}
                                         <input type="hidden" name="item_list" value="Fridge">    {{-- List which item belongs to --}}
 
 

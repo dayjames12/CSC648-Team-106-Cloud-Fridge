@@ -34,15 +34,16 @@ class ItemsController extends Controller
 
         $item->save();
 
-        return redirect($request->origin);
+        return redirect('home');
     }
 
     public function search(Request $request)
     {
         $search = $request->input('search');
-        $items = Item::where('name', 'LIKE', '%'.$search.'%')->get();
+        $items = Item::fridge()->where('name', 'LIKE', '%'.$search.'%')->get();
+        $groceryItems = Item::groceryList()->get();
 
-        return view('home', ['items' => $items]);
+        return view('home', compact(['items','groceryItems']));
     }
 
     public function sort(Request $request)
@@ -52,28 +53,19 @@ class ItemsController extends Controller
             $sort = $_POST['sort_by'];
 
             if ($sort == '1') {
-                $items = Item::all()->sortBy('name');
+                $items = Item::fridge()->get()->sortBy('name');
             }
             else if ($sort == '2') {
-                $items = Item::all()->sortBy('expiration_date');
+                $items = Item::fridge()->get()->sortBy('expiration_date');
             }
             else if ($sort == '3') {
-                $items = Item::all()->sortBy('quantity');
+                $items = Item::fridge()->get()->sortBy('quantity');
             }
-        $sort = $request->sort_by;
-        }// not sure if close bracket goes before or after previous line
+        }
+        
+        $groceryItems = Item::groceryList()->get();
 
-        // if ($sort == '1') {
-        //     $items = Item::all()->sortBy('name');
-        // }
-        // else if ($sort == '2') {
-        //     $items = Item::all()->sortBy('expiration');
-        // }
-        // else if ($sort == '3') {
-        //     $items = Item::all()->sortBy('quantity');
-        // }
-
-        return view('home', ['items' => $items]);
+        return view('home', compact(['items', 'groceryItems']));
     }
 
     public function edit(Item $item){
