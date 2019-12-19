@@ -15,8 +15,7 @@ class Item extends Model
     public function scopeFridge($query)
     {
         $user_id = auth()->user()->id;
-
-        return $query->where('user_id', '=', $user_id);
+        return $query->where('user_id', '=', $user_id)->where('item_list', '=', 'Fridge');
     }
 
     /*
@@ -26,6 +25,7 @@ class Item extends Model
      */
     public function scopeGroceryList($query)
     {
-        return $query->where('item_list', '=', 'Grocery list');
+        $user_id = auth()->user()->id;
+        return $query->where('user_id', '=', $user_id)->where('item_list', '=', 'Grocery list');
     }
 }

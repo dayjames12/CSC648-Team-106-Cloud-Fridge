@@ -24,10 +24,11 @@ class HomeController extends Controller
     public function index()
     {
         $items = \App\Item::fridge()->get();
+        $groceryItems = \App\Item::groceryList()->get();
+
         $user_id = auth()->user()->id;
         // $items = DB::table('items')->where('user_id', $user_id)
-
-
-        return view('home', ['items' => $items]);
+        
+        return view('home', compact(['items', 'groceryItems']));
     }
 }
