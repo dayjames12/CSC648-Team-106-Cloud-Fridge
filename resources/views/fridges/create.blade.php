@@ -3,42 +3,155 @@
 @section('title','Fridge Create')
 
 @section('content')
-    <h1>Create a new fridge</h1>
 
-    <form method="POST" action="/fridges">
-    {{ csrf_field() }}
-        <div class="field">
-            <label class="label" for="name">Fridge Name</label>
-            <div class="control">
-                <input type="text" class="input {{ $errors->has('name') ? 'is-danger' : '' }}" name="name" placeholder="Fridge Name" value="{{old('name')}}">
+    <section class="section">
+        
+        <div class="notification is-bold has-text-centered">
+              
+            <h1 class="title">Create a new fridge</h1>
+              
+        </div>
+
+        <div id = "fridgeCreate" class="notification">
+            
+            <div class="hero-body">
+                <form method="POST" action="/fridges">
+                {{ csrf_field() }}
+                    <div class="field">
+                        <label class="label" for="name">Fridge Name</label>
+                        <div class="control">
+                            <input type="text" class="input {{ $errors->has('name') ? 'is-danger' : '' }}" name="name" placeholder="Fridge Name" value="{{old('name')}}">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="owner">Fridge Owner</label>
+                        <div class="control">
+                            <input type="text" class="input {{ $errors->has('owner') ? 'is-danger' : '' }}"name="owner" placeholder="Fridge Owner" value="{{old('owner')}}">
+                        </div>
+                    </div>
+                    <?php
+                        $user_id = auth()->user()->id;
+                    ?>
+                    <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
+
+                    <div>
+                        <button type="submit">Create Fridge</button>
+                    </div>
+                    @if ($errors->any())
+                        <div class="notification is-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </form>
             </div>
         </div>
-        <div class="field">
-            <label class="label" for="owner">Fridge Owner</label>
-            <div class="control">
-                <input type="text" class="input {{ $errors->has('owner') ? 'is-danger' : '' }}"name="owner" placeholder="Fridge owner" value="{{old('owner')}}">
-            </div>
-        </div>
-        <?php
-            $user_id = auth()->user()->id;
-        ?>
-        <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
-
-        <div>
-            <button type="submit">Create Fridge</button>
-        </div>
-        @if ($errors->any())
-            <div class="notification is-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-    </form>
-
+    </section>
     
+    <!-- Grocery Modal -->
+    <div id="modal-grocery" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Grocery</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <aside>
+                
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Salad greens</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Button Mushrooms</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Cherry Tomatoes</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Onion</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Peppers</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Cucumber</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Naan Bread</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Feta Cheese</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Food Colouring</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Wooden toothpicks</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Wooden Skewers</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Pickles</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Pickled Veggies</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Olives</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Croutons</span>
+                    </label>
+
+                    <label>
+                        <input type=checkbox>
+                        <span>Nice Soup</span>
+                    </label>
+                </aside>
+            </section>
+            
+            <footer class="modal-card-foot">
+            <a href="/items/create?origin=/groceryList" class="button is-info">Add Item</a>
+                <button class="button is-danger">Clear All</button>
+            </footer>
+        </div>
+    </div>
+
     {{-- Bottom nav bar --}}
     <nav class="navbar is-link is-fixed-bottom" role="navigation">
         <div class="navbar-brand">

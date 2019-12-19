@@ -26,5 +26,7 @@ class HomeController extends Controller
         $items = \App\Item::fridge()->get();
 
         return view('home', ['items' => $items]);
+
+        $items = \App\Item::fridge()->get();
     }
 }

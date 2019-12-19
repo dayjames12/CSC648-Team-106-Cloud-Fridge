@@ -12628,7 +12628,7 @@ label.panel-block:hover {
 
 .notification {
   color: white;
-  background-color: #b0e5ff;
+  background-color: #76cfff;
   border-radius: 5px;
 }
 
@@ -12689,6 +12689,10 @@ label.panel-block:hover {
 
 .notification .is-primary {
   background-color: #5ba4de;
+}
+
+#fridgeCreate {
+  background: #6fd6f5;
 }
 
 .navbar.is-transparent {
@@ -12910,7 +12914,7 @@ label {
   margin: 0;
   cursor: pointer;
   position: relative;
-  padding-left: 2em;
+  padding-left: 0px;
 }
 
 label:last-of-type {
@@ -12918,7 +12922,7 @@ label:last-of-type {
 }
 
 #foodlist_date {
-  background: #5bc0de;
+  background: #6fd6f5;
   border-radius: 15px;
 }
 
@@ -12955,5 +12959,9 @@ label:last-of-type {
 .modal-card .modal-card-head .modal-card-title {
   color: white;
   text-align: center;
+}
+
+.image {
+  margin: auto;
 }
 
