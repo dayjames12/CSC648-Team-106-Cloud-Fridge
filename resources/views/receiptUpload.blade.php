@@ -6,7 +6,7 @@
 {{-- enables usage of bulma icons --}}
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-<ocr-component class="title"></ocr-component>
+<ocr-component></ocr-component>
 
 <section class="section">
     <div class="container">

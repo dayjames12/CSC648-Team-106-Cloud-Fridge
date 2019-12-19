@@ -36,7 +36,7 @@ Route::get('/foodList', function () {
 
 /* Receipt Upload View */
 Route::get('/receiptUpload', function () {
-    return view('receiptUpload');
+    return view('ocr');
 });
 
 Auth::routes();
@@ -49,9 +49,9 @@ Route::get('/items/search', 'ItemsController@search');
 Route::post('/items/sort', 'ItemsController@sort');
 Route::delete('items/{item}', 'ItemsController@destroy');
 
-Route::get('/ocr', function (){
-    return view('ocr');
-});
+// Route::get('/ocr', function (){
+//     return view('ocr');
+// });
 
 
 Route::resource('fridges','FridgesController');

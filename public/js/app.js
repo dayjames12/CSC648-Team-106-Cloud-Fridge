@@ -49339,7 +49339,7 @@ function createCompileToFunctionFn (compile) {
 
 /*  */
 
-function createCompilerowner (baseCompile) {
+function createCompilerCreator (baseCompile) {
   return function createCompiler (baseOptions) {
     function compile (
       template,
@@ -49411,10 +49411,10 @@ function createCompilerowner (baseCompile) {
 
 /*  */
 
-// `createCompilerowner` allows creating compilers that use alternative
+// `createCompilerCreator` allows creating compilers that use alternative
 // parser/optimizer/codegen, e.g the SSR optimizing compiler.
 // Here we just export a default compiler using the default parts.
-var createCompiler = createCompilerowner(function baseCompile (
+var createCompiler = createCompilerCreator(function baseCompile (
   template,
   options
 ) {
@@ -49922,13 +49922,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\james\Development\648\csc648-03-fa19-team106-georgebutler\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\james\Development\648\csc648-03-fa19-team106-georgebutler\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! D:\Documents\CloudFridge\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Documents\CloudFridge\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> upstream/master
 
 
 /***/ })
