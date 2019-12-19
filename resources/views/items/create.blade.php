@@ -79,16 +79,16 @@
 
                             if ($origin == '/home')
                             {
-                                $item_list ?? '' = 'Fridge';
+                                $item_list = 'Fridge';
                             }
                             else if ($origin == '/groceryList')
                             {
-                                $item_list ?? '' = 'Grocery list';
+                                $item_list = 'Grocery list';
                             }
                         ?>
                         
                         <input type="hidden" name="origin" value="<?php echo $origin ?>">  {{-- Original directory that made GET request --}}
-                        <input type="hidden" name="item_list" value="<?php echo $item_list ?? '' ?>">    {{-- List which item belongs to --}}
+                        <input type="hidden" name="item_list" value="<?php echo $item_list ?>">    {{-- List which item belongs to --}}
 
 
                     </form>
