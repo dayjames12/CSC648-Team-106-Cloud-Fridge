@@ -54,10 +54,10 @@ class ItemsController extends Controller
                 $items = Item::all()->sortBy('name');
             }
             else if ($sort == '2') {
-                $items = Item::all();
+                $items = Item::all()->sortBy('quantity');
             }
             else if ($sort == '3') {
-                $items = Item::all();
+                $items = Item::all()->sortBy('expiration_date');
             }
         $sort = $request->sort_by;
         }// not sure if close bracket goes before or after previous line
