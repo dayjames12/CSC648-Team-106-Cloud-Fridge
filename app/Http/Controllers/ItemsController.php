@@ -25,7 +25,7 @@ class ItemsController extends Controller
     public function store(Request $request){
         $item = new Item;
 
-        $item->fridge_id = Fridge::first()->id;
+        $item->user_id = auth()->user()->id;
         $item->name = $request->name;
         $item->quantity = $request->quantity;
         $item->price = $request->price;
@@ -41,8 +41,9 @@ class ItemsController extends Controller
     {
         $search = $request->input('search');
         $items = Item::fridge()->where('name', 'LIKE', '%'.$search.'%')->get();
+        $groceryItems = Item::groceryList()->get();
 
-        return view('home', compact('items'));
+        return view('home', compact(['items','groceryItems']));
     }
 
     public function sort(Request $request)
@@ -60,20 +61,11 @@ class ItemsController extends Controller
             else if ($sort == '3') {
                 $items = Item::fridge()->get()->sortBy('quantity');
             }
-        $sort = $request->sort_by;
-        }// not sure if close bracket goes before or after previous line
+        }
+        
+        $groceryItems = Item::groceryList()->get();
 
-        // if ($sort == '1') {
-        //     $items = Item::all()->sortBy('name');
-        // }
-        // else if ($sort == '2') {
-        //     $items = Item::all()->sortBy('expiration');
-        // }
-        // else if ($sort == '3') {
-        //     $items = Item::all()->sortBy('quantity');
-        // }
-
-        return view('home', compact('items'));
+        return view('home', compact(['items', 'groceryItems']));
     }
 
     public function edit(Item $item){
